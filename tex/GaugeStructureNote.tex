@@ -1,0 +1,622 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Heis}{\mathrm{Heis}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\UU}{\mathrm{U}}
+\newcommand{\Gpi}{G_{\Pi}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\ImH}{\operatorname{Im}\mathbb{H}}
+\newcommand{\Ceff}{C_{\mathrm{eff}}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\title{The Gauge Structure Sub-Programme\\[0.4em]
+\large Presentation Note 3}
+
+\author{J\'{e}r\^{o}me Beau\\[0.3em]
+\small Independent Researcher\\
+\small \texttt{jerome.beau@cosmochrony.org}}
+
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    The gauge structure sub-programme identifies the internal symmetry groups that survive
+    as invariants of admissible non-injective projection.
+    Its central question is: which internal symmetry groups are forced by the admissibility
+    structure of $\Pi$, rather than postulated?
+    The sub-programme establishes the following chain:
+    \[
+      \Pi^{-1}(O_n)
+      \;\Longrightarrow\;
+      \text{phase fibre}
+      \;\Longrightarrow\;
+      \UU(1)
+      \;\Longrightarrow\;
+      \ImH \simeq \su(2)
+      \;\Longrightarrow\;
+      \SU(2)
+      \;\Longrightarrow\;
+      \text{colour triplet}
+      \;\Longrightarrow\;
+      \SU(3).
+    \]
+    The status of each factor is distinct:
+    $\UU(1)$ is structural (Hopf fibre of $\Pi \simeq S^3$);
+    $\SU(2)$ is closed analytically (O27--O30, Q6a);
+    $\SU(3)$ is established unconditionally on the colour-adapted graph and supported
+    on the standard graph at the rank, averaged, effective-exponent, and numerical levels.
+    The remaining open component is the pointwise finite-$q$ profile equality on the
+    standard graph.
+    The sub-programme closes the gauge group identification.
+    It does not derive Yang--Mills dynamics: that belongs to the gauge--gravity spectral
+    stratification sub-programme.
+  \end{abstract}
+
+  \medskip
+  \noindent\textbf{Keywords.}
+  gauge structure; admissible projection; U(1); SU(2); SU(3); Hopf fibration; Weil
+  representation; colour triplet; charge quantisation; gauge group; Yang--Mills; presentation note.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+
+  \section{Motivation and Central Question}
+    \label{sec:motivation}
+
+    The gauge structure sub-programme answers the following question.
+
+    \medskip
+    \noindent\textit{Central question.}
+    The non-injective projection $\Pi: \chi \to O$ selects admissible configurations from the
+    relational substrate.
+    Its fibre $\Pi^{-1}(O_n)$ carries internal structure.
+    \textit{Which internal symmetry groups are preserved as invariants of admissible projection,
+      and why are they precisely $\UU(1)$, $\SU(2)$, and $\SU(3)$?}
+
+    \medskip
+    The question is stated precisely as follows.
+    Define $\Gpi$ as the group of fibre symmetries of $\Pi$ that preserve the admissibility
+    constraints.
+    The sub-programme establishes that $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$.
+
+    \medskip
+    The physical importance of this identification is that it provides the gauge group of the
+    Standard Model as a \emph{forced output} of the admissibility structure, not as a postulate.
+    In the Cosmochrony framework, gauge invariance is not introduced as a separate symmetry
+    principle: it is the residual fibre symmetry of the projection.
+    The gauge bosons and their interactions are subsequently derived as consequences of this
+    structure via the spectral entropy functional (Q12, Q13).
+
+    \medskip
+    This note is concerned exclusively with the \emph{identification} of the gauge group
+    $\Gpi$.
+    The derivation of Yang--Mills equations from the vertical variation of the spectral
+    entropy belongs to the gauge--gravity spectral stratification sub-programme
+    (Presentation Note~8) and is not claimed here.
+
+  \section{Position in the Cosmochrony Programme}
+    \label{sec:position}
+
+    The gauge structure sub-programme sits at the intersection of Branch~I (axiomatic
+    primitive and fibre structure) and Branch~II (spectral admissibility).
+    It takes the following inputs from Presentation Notes~1 and~2 and uses them to
+    identify the internal symmetry group.
+
+    From Note~1 (spectral admissibility):
+    \begin{itemize}
+      \item Spin-$\tfrac{1}{2}$ admissible sector $V_\rho \cong \mathbb{C}^2$
+      (O27--O29~\cite{Beau2026a31,Beau2026a32,Beau2026a33}).
+      \item Threshold dimension $\Sigma_c(n_3) = 3$ from quaternionic minimality
+      (O23~\cite{Beau2026a27}).
+      \item $\ImH \cong \su(2)$ as the spatial algebra (O23--O27).
+      \item SU(3) colour sector conditional on $[\mathrm{H\text{-}color}]$
+      (O31--O32~\cite{Beau2026a35,Beau2026a36}).
+    \end{itemize}
+
+    From Note~2 (emergent geometry):
+    \begin{itemize}
+      \item Effective projection space $H_{\mathrm{eff}} = \Sym^2(V_\rho)$
+      (Q7~\cite{Beau2026q7}).
+      \item Effective base manifold $\mathbb{R}_\tau \times \Heis_3(\mathbb{R})$ with
+      metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ (Q5b--Q11).
+      \item Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ with structure group $\Gpi$
+      (Q6a~\cite{Beau2026q6a}, Q12~\cite{Beau2026q12}).
+    \end{itemize}
+
+    \begin{remark}[Vocabulary note]
+      Throughout this note, \emph{gauge invariance} refers to the residual fibre symmetry of the
+      admissible projection $\Pi$, not to an independently postulated symmetry principle.
+      The substrate $\chi$ is static; gauge freedom arises from the non-injectivity of $\Pi$,
+      not from a dynamics of $\chi$.
+    \end{remark}
+
+    \begin{remark}[Scope: gauge group identification only]
+      This sub-programme closes the identification $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$.
+      It does not derive the Yang--Mills equations or the gauge--gravity coupling ratio.
+      Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
+    \end{remark}
+
+  \section{Logical Chain of the Sub-Programme}
+    \label{sec:chain}
+
+    The derivation chain has four stages.
+
+    \begin{equation}
+      \label{eq:chain}
+      \underbrace{\Pi \simeq S^3}_{\text{fibre topology}}
+      \;\Longrightarrow\;
+      \underbrace{S^1 \hookrightarrow S^3 \to S^2}_{\text{Hopf fibration}}
+      \;\Longrightarrow\;
+      \underbrace{\UU(1)}_{\pi_1(S^1) \cong \mathbb{Z}}
+      \;\Longrightarrow\;
+      \underbrace{\su(2) \text{ from } \ImH}_{\text{O23, O27}}
+      \;\Longrightarrow\;
+      \underbrace{\SU(2)}_{\text{O27--O30, Q6a}}
+      \;\Longrightarrow\;
+      \underbrace{\SU(3)}_{\text{O31--O32}}.
+    \end{equation}
+
+    The three factors arise from distinct structural mechanisms.
+
+    \begin{enumerate}
+      \item \textit{$\UU(1)$ from the Hopf phase fibre.}
+      The projection fibre $\Pi \simeq S^3$ carries a canonical Hopf fibration
+      $S^1 \hookrightarrow S^3 \to S^2$.
+      The circle fibre $S^1$ supports a $\UU(1)$ phase symmetry whose winding number
+      $w \in \pi_1(S^1) \cong \mathbb{Z}$ is the topological origin of electric charge.
+      This is a structural result: it follows from the minimal compact geometry required to
+      support non-injective stable projections (TopologicalInvariants~\cite{Beau2026k}).
+
+      \item \textit{$\SU(2)$ from quaternionic admissibility.}
+      The admissible sector is $V_\rho \cong \mathbb{C}^2$ (spin-$\tfrac{1}{2}$).
+      The unique associative non-commutative minimal algebra compatible with admissibility
+      is $\mathbb{H}$ (O23); $\dim_\mathbb{R} \ImH = 3$ forces three internal directions.
+      Any admissible morphism $\Phi_{q,\rho}$ necessarily factors through $\su(2)$
+      (O27, quaternionic rigidity theorem).
+      The identification chain is:
+      \[
+        \text{emergence}
+        \Rightarrow \su(2)\;[\text{O27}]
+        \Rightarrow \text{pair data} \in \Sym(V_\rho, \mathbb{C})\;[\text{O29}]
+        \Rightarrow r_{\mathrm{eff}} = 3
+        \Rightarrow d_\rho = 2\;[\text{O29}].
+      \]
+
+      \item \textit{$\SU(3)$ from colour-triplet co-admissibility.}
+      The metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
+      co-admissibility unconditionally for the colour-adapted Cayley graph (O31).
+      $\SU(3)$ is the symmetry group of co-admissible colour triplets
+      $\{V_c, V_{\omega c}, V_{\omega^2 c}\}$ with $\omega^3 \equiv 1 \pmod q$,
+      $q \equiv 1 \pmod 3$.
+      On the standard graph, the identification holds at the rank, averaged,
+      effective-exponent, and numerical levels.
+    \end{enumerate}
+
+  \section{Constituent Papers}
+    \label{sec:papers}
+
+    \subsection{The projective fibre and the \texorpdfstring{$\UU(1)$}{U(1)} phase sector}
+      \label{sec:u1}
+
+      The $\UU(1)$ factor arises from the topological structure of the projection fibre.
+
+      \textbf{Foundation~M}~\cite{Beau2026m} establishes that the projection fibre
+      $\Pi^{-1}(O_n)$ is identified with the Weil representation $V_\rho$ of
+      $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, carrying a canonical symplectic (hence phase) structure.
+
+      \textbf{TopologicalInvariants}~\cite{Beau2026k} classifies the admissible homotopy
+      invariants of the projection fibre.
+      The projection fibre $\Pi \simeq S^3$ carries the Hopf fibration
+      $S^1 \hookrightarrow S^3 \xrightarrow{\pi_H} S^2$.
+      Three results are established.
+      (i)~Electric charge arises from $\pi_1(S^1) \cong \mathbb{Z}$: the winding number
+      $w \in \mathbb{Z}$ is the topological invariant, giving $q_{\mathrm{eff}} = w \cdot e$.
+      This is proved on the canonical admissible model (Proposition~3.1).
+      (ii)~On the canonical admissible model, the bounded-flux constraint removes the polar
+      regions of the Hopf base $S^2$, reducing the admissible base to an annulus with
+      $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ (Proposition~4.1): no isolated magnetic monopoles
+      are topologically admissible.
+      (iii)~Parity violation is interpreted as projective chirality: an orientation dependence of
+      admissibility under $\Pi$, which selects one handedness of winding invariants.
+
+      \textbf{Q6a}~\cite{Beau2026q6a} derives the gauge group $\Gpi$, gauge charges, and the
+      Yang--Mills principal bundle from the fibre structure of $\Pi$.
+      The $\UU(1)$ factor is identified as the phase sector of the Weil representation,
+      arising from the canonical symplectic structure of $V_\rho$ and its metaplectic lift.
+      Q6a constructs the admissible principal bundle $P_{\Gpi}(M, \Gpi)$ with structure group
+      $\Gpi$ and connection $A \in \Omega^1(P, \mathfrak{g}_\Pi)$.
+
+      \textbf{SMchargemass}~\cite{Beau2026e} interprets mass, charge, and inertia as distinct
+      symmetry classes of a single bounded-response mechanism.
+      Isotropic saturation gives mass; oriented saturation gives charge.
+      The $\UU(1)$ structure is identified as the phase fibre symmetry of non-injective
+      projection: local $\UU(1)$ gauge invariance arises from the residual phase freedom of
+      the projected description.
+
+    \subsection{Quaternionic admissibility and the \texorpdfstring{$\SU(2)$}{SU(2)} sector}
+      \label{sec:su2}
+
+      The $\SU(2)$ factor is closed analytically by the chain O23--O30 and Q6a.
+
+      \textbf{O23}~\cite{Beau2026a27} proves that the threshold $\Sigma_c(n_3) = 3$ follows
+      from the fact that $\mathbb{H}$ is the minimal admissible associative non-commutative
+      algebra, and $\dim_\mathbb{R} \ImH = 3$.
+      Three is not an input; it is derived from the quaternionic structure.
+
+      \textbf{O27}~\cite{Beau2026a31} proves the quaternionic rigidity theorem: every admissible
+      morphism $\Phi_{q,\rho}$ necessarily factors through $\su(2)$.
+      This is the analytical cornerstone of the $\SU(2)$ identification.
+      It is proved unconditionally (Theorem~1.1 of O27), without reference to the bridge
+      conjecture or the finite-$q$ structure.
+
+      \textbf{O28}~\cite{Beau2026a32} establishes asymptotic calibration: the covariance
+      $\mathcal{C}_c$ in $\mathrm{End}(H_{\mathrm{eff}})$ has rank exactly 3 for every conjugate
+      pair at $q \in \{61, 101, 151\}$, with invariant eigenvalue structure
+      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$ (the exact value $\lambda_1/\lambda_2 = 2$ is derived
+      analytically in O30).
+
+      \textbf{O29}~\cite{Beau2026a33} identifies the spin-$\tfrac{1}{2}$ irreducible sector via
+      the symmetric rank formula $r_{\mathrm{eff}} = d_\rho(d_\rho + 1)/2$.
+      The unique solution $d_\rho = 2$ is confirmed for $q \in \{61, 101, 151\}$.
+
+      \textbf{O30}~\cite{Beau2026a34} derives analytically the invariant eigenvalue ratio
+      $\lambda_1/\lambda_2 = 2$: Born--Infeld parity anti-linearity forces an equatorial
+      constraint on the admissible fibre.
+      The factor of two is purely structural (squared symmetric-tensor normalisation of the
+      central Carnot generator $Z = [X, Y]$).
+
+      \textbf{Q6a}~\cite{Beau2026q6a} closes the $\SU(2)$ identification at the level of the
+      admissible principal bundle: the $\SU(2)$ factor is the structure group of the
+      non-abelian fibre sector corresponding to the spin-$\tfrac{1}{2}$ module.
+      The associated connection is the admissible gauge field.
+
+      \textbf{Q7}~\cite{Beau2026q7} establishes that the three-dimensional internal space
+      $H_{\mathrm{eff}} = \Sym^2(V_\rho)$ carries the unique irreducible $\su(2)$-module of
+      dimension 3, confirming that the spatial and internal $\su(2)$ structures are
+      representation-theoretically locked.
+
+    \subsection{Gauge charges and admissible bundle structure}
+      \label{sec:charges}
+
+      \textbf{Q6a}~\cite{Beau2026q6a} constructs the full admissible principal bundle
+      $P_{\Gpi}(M, \Gpi)$ with fibre structure matching the three admissibility fixed points of
+      orbit sizes 1, 2, and 3.
+      Gauge charges are identified as holonomy invariants of the admissible connection $A$.
+      The derivation is structural and does not require the Yang--Mills equations.
+
+      \textbf{Q12}~\cite{Beau2026q12} identifies $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$
+      explicitly as the composite of orbit sub-bundles and extends $A_g$ to the Laplace-type
+      operator $A_{g,A}$ on the associated vector bundle.
+      The base--fibre decomposition and the horizontal--vertical decoupling lemma
+      (Lemma~1 of Q12) guarantee that the gauge sector $a_4$ and the gravitational sector
+      $a_2$ are independent.
+
+      \textbf{TopologicalInvariants}~\cite{Beau2026k} places the charge identification within
+      the topological layer: charge is a $\pi_1$ invariant; the absence of monopoles follows
+      from $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical model.
+
+    \subsection{Colour-triplet co-admissibility and the \texorpdfstring{$\SU(3)$}{SU(3)} sector}
+      \label{sec:su3}
+
+      The $\SU(3)$ sector arises from the co-admissibility of Weil-block triplets under the
+      $\mathbb{Z}/3\mathbb{Z}$ symmetry of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ for
+      $q \equiv 1 \pmod 3$.
+
+      \textbf{O31}~\cite{Beau2026a35} develops the full $\SU(3)$ emergence framework.
+      Three results are established.
+      (i)~Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
+      co-admissibility unconditionally for the colour-adapted Cayley graph
+      $\mathrm{Cay}(G_q, S_q^{(3)})$ (proved).
+      (ii)~$\SU(3)$ is identified as the symmetry group of the co-admissible colour triplet
+      $\{V_c, V_{\omega c}, V_{\omega^2 c}\}$, conditional on
+      $[\mathrm{H\text{-}color}]$ for the standard graph (structural).
+      (iii)~The spectral route to $[\mathrm{H\text{-}color}]$ is closed: exact generator-twist
+      isospectrality does not imply colour-triplet capacity profile equality (proved, closing
+      the spectral approach).
+
+      \textbf{O32}~\cite{Beau2026a36} provides the numerical test and the partial analytical
+      resolution of $[\mathrm{H\text{-}color}]$.
+      Four levels are established.
+      $[\mathrm{H\text{-}color}]_{\mathrm{rank}}$: sector rank equality
+      $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ proved unconditionally via
+      intra-coset Vandermonde symmetry (O31).
+      $[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: block-averaged capacity equality
+      $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$,
+      proved in O32 via the modulation frequency argument.
+      $[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: effective exponent equality
+      $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the $q \to \infty$ limit, proved in O32.
+      $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: exact profile equality at finite $q$,
+      consistent with all numerical data but not claimed analytically.
+      Numerical results: passes for $q \in \{61, 151, 211, 307\}$ ($q \equiv 1 \pmod 3$,
+      test primes); controls $q \in \{29, 101\}$ ($q \equiv 2 \pmod 3$) confirm noise floor.
+
+    \subsection{Boundary with Yang--Mills dynamics}
+      \label{sec:ym-boundary}
+
+      The gauge structure sub-programme identifies $\Gpi$ and constructs the admissible
+      principal bundle.
+      It does not derive the Yang--Mills equations.
+      That derivation belongs to the gauge--gravity spectral stratification sub-programme
+      (Presentation Note~8), where the vertical variation of the joint spectral entropy
+      functional $\mathcal{S}_\Pi[g, A]$ yields the $a_4$ Yang--Mills response.
+
+      The logical boundary is sharp: Q6a and Q12 are constituent papers of the gauge
+      structure sub-programme in so far as they identify the gauge group and construct
+      the bundle.
+      Q12 and Q13 become constituent papers of Note~8 in so far as they derive the
+      Yang--Mills equations and the gauge--gravity coupling.
+
+      The $a_4$-level result of Q12 (Theorem~1) depends on the gauge group $\Gpi$ as
+      an input from Q6a and the O-series.
+      It is conditional on $[\mathrm{H\text{-}color}]$ for the $\SU(3)$ sector in exactly the
+      same way as the gauge group identification.
+
+      \begin{table}[ht]
+        \centering
+        \caption{Summary of constituent papers by sector.
+        Status: P = proved; S = structural; N = numerical; O = open.}
+        \label{tab:papers}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{@{}lllll@{}}
+          \toprule
+          Sector & Papers & Central output & Status \\
+          \midrule
+          $\UU(1)$ fibre & Foundation, TopInv, SMchargemass & Charge $= w \cdot e$; no monopoles & P (canonical) \\
+          $\UU(1)$ bundle & Q6a, Q12 & Admissible $\UU(1)$ connection & S \\
+          $\SU(2)$ sector & O23, O27--O30, Q6a, Q7 & $d_\rho = 2$; $\su(2)$ closed & P \\
+          Charges & Q6a, TopInv, Q12 & Bundle structure; holonomy charges & S \\
+          $\SU(3)$ adapted & O31 & Triplet co-admissibility & P \\
+          $\SU(3)$ standard & O31--O32 & $[\mathrm{H\text{-}color}]_{\mathrm{rank/avg/eff}}$ & P/S \\
+          $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ & O32 & Finite-$q$ profile equality & O \\
+          \bottomrule
+        \end{tabular}
+      \end{table}
+
+  \section{Inputs from Upstream Results}
+    \label{sec:inputs}
+
+    \begin{enumerate}
+      \item \textbf{Weil representation and fibre structure.}
+      The identification $\Pi^{-1}(O_n) \cong V_\rho$ is a theorem of
+      Foundation~M~\cite{Beau2026m}.
+      The canonical symplectic structure of $V_\rho$ is the origin of the phase degree of
+      freedom.
+
+      \item \textbf{Non-injectivity as structural necessity.}
+      ENI~\cite{Beau2026l} establishes that non-injectivity is not an interpretive option:
+      any genuinely emergent description with $S_\Pi > 0$ must be non-injective.
+      Gauge freedom is a direct consequence of this non-injectivity: the fibre
+      $\Pi^{-1}(O_n)$ is non-trivial precisely because $\Pi$ is non-injective.
+
+      \item \textbf{Spin-$\tfrac{1}{2}$ sector and $\Sigma_c(n_3) = 3$.}
+      From Note~1 (O23, O27, O29): the admissible sector is $V_\rho \cong \mathbb{C}^2$;
+      $\ImH \cong \su(2)$ carries three internal directions; $d_\rho = 2$ is the unique
+      admissible irreducible dimension.
+
+      \item \textbf{Effective geometry.}
+      From Note~2 (Q5b--Q11): the effective base manifold $M = \mathbb{R}_\tau \times
+      \Heis_3(\mathbb{R})$ is the space over which the principal bundle is defined.
+    \end{enumerate}
+
+  \section{Outputs to Downstream Branches}
+    \label{sec:outputs}
+
+    \begin{table}[ht]
+      \centering
+      \caption{Principal outputs and downstream consumers.}
+      \label{tab:outputs}
+      \renewcommand{\arraystretch}{1.3}
+      \begin{tabular}{@{}p{5.5cm}p{4.5cm}l@{}}
+        \toprule
+        Output & Consumer & Status \\
+        \midrule
+        $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & Q12, Q13, Q14 & S \\
+        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q12, Q13 & S \\
+        Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & Q14, applications & P (canonical) \\
+        Absence of magnetic monopoles & Q14 & P (canonical) \\
+        $d_\rho = 2$, $\su(2)$ closure & Q14, Q12, Q13 & P \\
+        $\SU(3)$ at $[\mathrm{H\text{-}color}]_{\mathrm{eff}}$ level & Q12, Q13 & P ($q \to \infty$) \\
+        Projective chirality & Q14 & S \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+
+  \section{Status of Results}
+    \label{sec:status}
+
+    \subsection{Proved results}
+      \label{sec:proved}
+
+      \begin{enumerate}
+        \item \textit{Charge quantisation on the canonical model}
+        (TopologicalInvariants~\cite{Beau2026k}, Proposition~3.1):
+        $q_{\mathrm{eff}} = w \cdot e$ with $w \in \mathbb{Z} = \pi_1(S^1)$.
+
+        \item \textit{Absence of magnetic monopoles on the canonical model}
+        (TopologicalInvariants, Proposition~4.1 and Corollary~5.1):
+        $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical admissible model;
+        no isolated magnetic charge is topologically admissible.
+
+        \item \textit{Quaternionic minimality} (O23~\cite{Beau2026a27}):
+        $\mathbb{H}$ is the minimal admissible associative non-commutative algebra;
+        $\dim_\mathbb{R} \ImH = 3$; three is derived, not postulated.
+
+        \item \textit{Quaternionic rigidity} (O27~\cite{Beau2026a31}, Theorem~1.1):
+        every admissible morphism $\Phi_{q,\rho}$ factors through $\su(2)$, proved
+        unconditionally.
+
+        \item \textit{Spin-$\tfrac{1}{2}$ sector identification} (O29~\cite{Beau2026a33}):
+        $r_{\mathrm{eff}} = 3$, $d_\rho = 2$, confirmed for $q \in \{61, 101, 151\}$.
+
+        \item \textit{Eigenvalue ratio $\lambda_1/\lambda_2 = 2$}
+        (O30~\cite{Beau2026a34}): analytically derived from the equatorial fibre constraint.
+
+        \item \textit{Triplet co-admissibility on the colour-adapted graph}
+        (O31~\cite{Beau2026a35}): metaplectic intertwining forces unconditional co-admissibility
+        for $\mathrm{Cay}(G_q, S_q^{(3)})$.
+
+        \item \textit{Generator-twist isospectrality} (O31, proved):
+        the spectral route to $[\mathrm{H\text{-}color}]$ is closed.
+
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$}
+        (O31): intra-coset Vandermonde symmetry gives rank equality unconditionally.
+
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$}
+        (O32~\cite{Beau2026a36}, Proposition~1): modulation frequency argument gives
+        $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$.
+
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$} (O32):
+        effective exponent equality $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the
+        $q \to \infty$ limit.
+
+        \item \textit{Horizontal--vertical decoupling} (Q12~\cite{Beau2026q12}, Lemma~1):
+        the Einstein sector $a_2$ and the Yang--Mills sector $a_4$ are independent under the
+        joint spectral entropy; the gauge group structure does not affect the gravitational
+        response at leading order.
+      \end{enumerate}
+
+    \subsection{Structural results}
+      \label{sec:structural}
+
+      \begin{enumerate}
+        \item \textit{$\UU(1)$ as phase fibre} (Foundation, Q6a):
+        the $\UU(1)$ factor is the phase symmetry of the canonical symplectic structure
+        of $V_\rho$.
+        The identification is structural; it follows from the Weil representation and is not a
+        separate postulate.
+
+        \item \textit{$\SU(2)$ bundle sector} (Q6a):
+        the $\SU(2)$ factor is the structure group of the non-abelian fibre sector;
+        the admissible gauge field is the associated connection.
+
+        \item \textit{$\SU(3)$ on the standard graph} (O31--O32, conditional on
+        $[\mathrm{H\text{-}color}]$):
+        $\SU(3)$ is the symmetry group of the co-admissible colour triplet for
+        $q \equiv 1 \pmod 3$.
+        The identification $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is structural at
+        the orbit-size level (orbit sizes 3, 2, 1 respectively).
+
+        \item \textit{Projective chirality and parity} (TopologicalInvariants, §6):
+        parity violation arises from the orientation dependence of admissibility under $\Pi$;
+        the $V - A$ structure is identified as the maximal chirality class
+        (partial structural result).
+
+        \item \textit{Gauge charges as holonomy invariants} (Q6a): the admissible connection
+        $A$ and its curvature $F_{\mu\nu}$ encode gauge charges as holonomy classes of the
+        bundle.
+      \end{enumerate}
+
+    \subsection{Numerical evidence}
+      \label{sec:numerical}
+
+      \begin{enumerate}
+        \item \textit{$r_{\mathrm{eff}} = 3$ and $d_\rho = 2$} (O28--O29):
+        confirmed at $q \in \{61, 101, 151\}$ with zero inter-pair variance for
+        $q \in \{61, 151\}$.
+
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$} (O32):
+        numerical passage for $q \in \{61, 151, 211, 307\}$ with variance ratio
+        $R_{\mathrm{var}}(q)$ decreasing toward zero.
+      \end{enumerate}
+
+    \subsection{Open hypotheses}
+      \label{sec:open-hyp}
+
+      \begin{enumerate}
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}:
+        exact profile equality $\sigma_{c_1}(n) = \sigma_{c_2}(n) = \sigma_{c_3}(n)$ at
+        finite $q$ and $M$.
+        Consistent with all data; not claimed analytically.
+        The spectral route is closed (O31); the correct mechanism must act at the level of
+        the BFS rank structure.
+
+        \item \textit{$\pi_2(\Ceff) = 0$ on the full configuration space}
+        (TopologicalInvariants, Remark~4.2):
+        the monopole exclusion is proved on the canonical model.
+        Extension to the full effective configuration space $\Ceff$ is open.
+
+        \item \textit{Maximal chirality ($V - A$)} (TopologicalInvariants, Remark~6.2):
+        projective chirality is established as a structural mechanism.
+        Its identification with the specific $V - A$ structure of the weak interaction remains
+        qualitative.
+      \end{enumerate}
+
+  \section{Open Deliverables}
+    \label{sec:open}
+
+    Three open items define the boundary of the sub-programme.
+
+    \textbf{Open deliverable 1: $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$.}
+    The $\SU(3)$ identification on the standard graph is established at the rank, averaged,
+    effective-exponent, and numerical levels.
+    The exact finite-$q$ profile equality on the standard graph remains analytically open.
+    Its resolution would complete the unconditional identification of $\Gpi$ without any
+    residual conditionality.
+
+    \textbf{Open deliverable 2: $\pi_2(\Ceff) = 0$ in general.}
+    The topological exclusion of magnetic monopoles is proved on the canonical admissible
+    model.
+    Extension to the full $\Ceff$ is a well-posed open problem in homotopy theory.
+
+    \textbf{Open deliverable 3: $V - A$ maximality from admissibility.}
+    The structural mechanism for projective chirality is identified.
+    Its derivation of the specific $V - A$ form of the weak interaction current from
+    admissibility data is an open analytical problem.
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    The gauge structure sub-programme identifies the admissible internal symmetry group
+    $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ as a forced output of the admissibility
+    constraints on the projection fibre $\Pi$.
+
+    The three factors have distinct origins and distinct analytical status.
+    $\UU(1)$ arises from the Hopf phase fibre of $\Pi \simeq S^3$; charge quantisation
+    follows from $\pi_1(S^1) \cong \mathbb{Z}$.
+    $\SU(2)$ arises from the quaternionic minimality of the admissible algebra and the
+    rigidity theorem of O27; it is closed analytically.
+    $\SU(3)$ arises from the metaplectic co-admissibility of Weil-block colour triplets;
+    it is established unconditionally on the colour-adapted graph and at three analytical
+    levels ($[\mathrm{H\text{-}color}]_{\mathrm{rank}}$, $[\mathrm{H\text{-}color}]_{\mathrm{avg}}$,
+    $[\mathrm{H\text{-}color}]_{\mathrm{eff}}$) on the standard graph.
+    The remaining open component is $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$.
+
+    This sub-programme closes the gauge group identification.
+    It does not derive Yang--Mills dynamics: the $a_4$ Yang--Mills response from the
+    vertical variation of the spectral entropy belongs to Note~8
+    (Gauge--Gravity Stratification).
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}
