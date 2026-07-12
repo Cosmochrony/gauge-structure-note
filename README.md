@@ -1,5 +1,5 @@
 This repository contains the source of the **Gauge Structure Presentation Note** Cosmochrony paper
-[*The Gauge Structure Sub-Programme — Presentation Note 3*](out/GaugeStructureNote.pdf).
+*The Gauge Structure Sub-Programme — Presentation Note 3*.
 
 This work is a **structured entry point** to the gauge structure sub-programme of the
 Cosmochrony corpus, not a summary of results. It maps the constituent papers, identifies
