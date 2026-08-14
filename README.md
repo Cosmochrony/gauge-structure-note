@@ -41,9 +41,10 @@ Three factors arise from distinct structural mechanisms:
    carries a canonical Hopf fibration $S^1 \hookrightarrow S^3 \to S^2$; the circle fibre
    supports a $\mathrm{U}(1)$ phase symmetry whose winding number $w \in \pi_1(S^1) \cong \mathbb{Z}$
    is the topological origin of electric charge.
-2. **$\mathrm{SU}(2)$ from quaternionic admissibility** — the admissible sector is
-   $V_\rho \cong \mathbb{C}^2$; the unique associative non-commutative minimal algebra
-   compatible with admissibility is $\mathbb{H}$ (O23), and the quaternionic rigidity
+2. **$\mathrm{SU}(2)$ from the supplied spinor carrier** — the admissible sector is
+   $V_\rho \cong \mathbb{C}^2$, a supplied input; O23 (Theorem 3.1) proves that its traceless
+   sector is $\mathfrak{su}(2) \cong \operatorname{Im}\mathbb{H}$, of real dimension three,
+   conditional on that carrier, and the quaternionic rigidity
    theorem (O27) forces every admissible morphism to factor through $\mathfrak{su}(2)$.
 3. **$\mathrm{SU}(3)$ from colour-triplet co-admissibility** — metaplectic intertwining of
    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ forces unconditional triplet co-admissibility
@@ -54,8 +55,9 @@ Three factors arise from distinct structural mechanisms:
 
 The sub-programme sits at the intersection of Branch I (axiomatic primitive and fibre
 structure) and Branch II (spectral admissibility). It takes from Presentation Note 1
-(spectral admissibility) the spin-$\tfrac12$ admissible sector $V_\rho \cong \mathbb{C}^2$,
-the threshold $\Sigma_c(n_3) = 3$, and $\operatorname{Im}\mathbb{H} \cong \mathfrak{su}(2)$.
+(spectral admissibility) the spin-$\tfrac12$ admissible sector $V_\rho \cong \mathbb{C}^2$
+(a supplied input), the threshold $\Sigma_c(n_3) = 3$ (a supplied selection rule, O23), and
+$\operatorname{Im}\mathbb{H} \cong \mathfrak{su}(2)$.
 It takes from Presentation Note 2 (emergent geometry) the effective projection space
 $H_{\mathrm{eff}} = \mathrm{Sym}^2(V_\rho)$, the effective base manifold
 $\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$, and the admissible principal bundle
@@ -70,7 +72,7 @@ The note organises the constituent papers by sector:
 |---|---|---|---|
 | $\mathrm{U}(1)$ fibre | Foundation, TopInv, SMchargemass | Charge $= w \cdot e$; no monopoles | P (canonical) |
 | $\mathrm{U}(1)$ bundle | Q6a, Q12 | Admissible $\mathrm{U}(1)$ connection | S |
-| $\mathrm{SU}(2)$ sector | O23, O27–O30, Q6a, Q7 | $d_\rho = 2$; $\mathfrak{su}(2)$ closed | P |
+| $\mathrm{SU}(2)$ sector | O23, O27–O30, Q6a, Q7 | $d_\rho = 2$ supplied; $\mathfrak{su}(2)$ conditional on the carrier | S |
 | Charges | Q6a, TopInv, Q12 | Bundle structure; holonomy charges | S |
 | $\mathrm{SU}(3)$ adapted | O31 | Triplet co-admissibility | P |
 | $\mathrm{SU}(3)$ standard | O31–O32 | $[\mathrm{H\text{-}color}]_{\mathrm{rank/avg/eff}}$ | P/S |
