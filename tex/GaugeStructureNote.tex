@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
@@ -13,11 +14,27 @@
 
 \geometry{margin=2.5cm}
 
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% The Adobe glyph list maps Delta and Omega to the technical codepoints U+2206 (INCREMENT) and
+% U+2126 (OHM SIGN), so the deposited text layer would not be searchable as Greek letters.
+\pdfglyphtounicode{Delta}{0394}
+\pdfglyphtounicode{Omega}{03A9}
+\pdfglyphtounicode{mu}{03BC}
+\pdfglyphtounicode{periodcentered}{22C5}
+
 \hypersetup{
   colorlinks=true,
   linkcolor=black,
   citecolor=black,
-  urlcolor=black
+  urlcolor=black,
+  pdftitle={The Gauge Structure Sub-Programme: Presentation Note 3},
+  pdfauthor={J\'{e}r\^{o}me Beau},
+  pdfsubject={Status of the gauge-sector identification after the O31 withdrawal: a structural
+    U(1), a conditional SU(2), a withdrawn SU(3), and no established composite gauge group},
+  pdfkeywords={gauge structure, admissible projection, U(1), SU(2), Hopf fibration,
+    charge quantisation, withdrawn gauge-group derivation, Weil representation, presentation note}
 }
 
 \theoremstyle{definition}
@@ -25,6 +42,7 @@
 
 \newcommand{\Heis}{\mathrm{Heis}}
 \newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
 \newcommand{\su}{\mathfrak{su}}
 \newcommand{\UU}{\mathrm{U}}
 \newcommand{\Gpi}{G_{\Pi}}
@@ -40,49 +58,45 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026}
+\date{2026\\[2pt]\small Version 2.0}
 
 \begin{document}
 
   \maketitle
 
   \begin{abstract}
-    The gauge structure sub-programme identifies the internal symmetry groups that survive
-    as invariants of admissible non-injective projection.
-    Its central question is: which internal symmetry groups are forced by the admissibility
-    structure of $\Pi$, rather than postulated?
-    The sub-programme establishes the following chain:
-    \[
-      \Pi^{-1}(O_n)
-      \;\Longrightarrow\;
-      \text{phase fibre}
-      \;\Longrightarrow\;
-      \UU(1)
-      \;\Longrightarrow\;
-      \ImH \simeq \su(2)
-      \;\Longrightarrow\;
-      \SU(2)
-      \;\Longrightarrow\;
-      \text{colour triplet}
-      \;\Longrightarrow\;
-      \SU(3).
-    \]
-    The status of each factor is distinct:
-    $\UU(1)$ is structural (Hopf fibre of $\Pi \simeq S^3$);
-    $\SU(2)$ is closed analytically (O27--O30, Q6a);
-    $\SU(3)$ is established unconditionally on the colour-adapted graph and on the standard
-    graph at all four analytical levels (rank, averaged, effective-exponent, and pointwise),
-    the last via Proposition~4.23 of O31~v1.5~\cite{Beau2026a35} (single-frequency BI
-    fingerprint structure).
-    The sub-programme closes the gauge group identification.
-    It does not derive Yang--Mills dynamics: that belongs to the gauge--gravity spectral
-    stratification sub-programme.
+    The gauge structure sub-programme asks which internal symmetry groups are forced by the
+    admissibility structure of the non-injective projection $\Pi$, rather than postulated.
+    This note records what that question has and has not established.
+
+    No derivation of the composite $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is available.
+    O31~\cite{Beau2026a35} withdraws every derivation of a gauge factor and of the Standard Model
+    gauge group as a composite, together with the determinant-one condition, the commutation of the
+    putative factors and the direct-product structure.
+    The $\SU(3)$ identification is withdrawn with it: the uniqueness of $\SU(3)$ among connected
+    compact subgroups acting irreducibly on $\mathbb{C}^3$ fails on the counterexample
+    $\SO(3) \subset \SU(3)$; the irreducibility of the admissible transformation group fails on the
+    diagonal torus $T^2$; and the arithmetic criterion $q \equiv 1 \pmod 3$ fails on
+    $\{1, 2, q-3\}$.
+
+    What remains is one structural sector and one conditional sector, not a group.
+    $\UU(1)$ is structural: the Hopf phase fibre of $\Pi$ gives charge quantisation
+    $q_{\mathrm{eff}} = w \cdot e$ from $\pi_1(S^1) \cong \mathbb{Z}$, on two premises carried as
+    structural input rather than derived; and on the canonical admissible model no isolated magnetic
+    monopole is topologically admissible.
+    $\SU(2)$ is conditional on the spinor carrier supplied by O23~\cite{Beau2026a27}: O27 gives
+    unique real-linear factorisation through the admissibility quotient, and the identification of
+    that quotient with $\su(2)$ is supplied rather than derived.
+
+    \emph{Interpretation, not result}: the sub-programme's remaining content is a phase sector and a
+    conditional non-abelian sector, and the step that would make them factors of a single gauge
+    group is exactly the step that has been withdrawn.
   \end{abstract}
 
   \medskip
   \noindent\textbf{Keywords.}
-  gauge structure; admissible projection; U(1); SU(2); SU(3); Hopf fibration; Weil
-  representation; colour triplet; charge quantisation; gauge group; Yang--Mills; presentation note.
+  gauge structure; admissible projection; U(1); SU(2); Hopf fibration; charge quantisation;
+  withdrawn gauge-group derivation; Weil representation; presentation note.
 
   \newpage
   \tableofcontents
@@ -92,29 +106,32 @@
   \section{Motivation and Central Question}
     \label{sec:motivation}
 
-    The gauge structure sub-programme answers the following question.
+    The gauge structure sub-programme asks the following question.
 
     \medskip
     \noindent\textit{Central question.}
     The non-injective projection $\Pi: \chi \to O$ selects admissible configurations from the
     relational substrate.
     Its fibre $\Pi^{-1}(O_n)$ carries internal structure.
-    \textit{Which internal symmetry groups are preserved as invariants of admissible projection,
-      and why are they precisely $\UU(1)$, $\SU(2)$, and $\SU(3)$?}
+    \textit{Which internal symmetry groups are preserved as invariants of admissible projection?}
 
     \medskip
     The question is stated precisely as follows.
     Define $\Gpi$ as the group of fibre symmetries of $\Pi$ that preserve the admissibility
     constraints.
-    The sub-programme establishes that $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$.
+    Whether $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is \emph{open}.
+    The derivation of that identification is withdrawn at its source (O31~\cite{Beau2026a35}), and
+    no replacement is available.
 
     \medskip
-    The physical importance of this identification is that it provides the gauge group of the
-    Standard Model as a \emph{forced output} of the admissibility structure, not as a postulate.
-    In the Cosmochrony framework, gauge invariance is not introduced as a separate symmetry
-    principle: it is the residual fibre symmetry of the projection.
-    The gauge bosons and their interactions are subsequently derived as consequences of this
-    structure via the spectral entropy functional (Q12, Q13).
+    Had the identification held, its physical importance would have been to give the Standard Model
+    gauge group as a forced output of admissibility rather than a postulate.
+    The framework's reading of gauge invariance as the residual fibre symmetry of a non-injective
+    projection is unaffected, since it is a reading of what gauge freedom \emph{is} and not a
+    derivation of which group appears.
+    What is not available is the group.
+    Statements elsewhere in the programme that take $\Gpi$ as a derived input, in particular the
+    spectral-entropy route to gauge dynamics (Q12, Q13), inherit that gap.
 
     \medskip
     This note is concerned exclusively with the \emph{identification} of the gauge group
@@ -128,8 +145,8 @@
 
     The gauge structure sub-programme sits at the intersection of Branch~I (axiomatic
     primitive and fibre structure) and Branch~II (spectral admissibility).
-    It takes the following inputs from Presentation Notes~1 and~2 and uses them to
-    identify the internal symmetry group.
+    It takes the following inputs from Presentation Notes~1 and~2 and uses them to address the
+    identification of the internal symmetry group.
 
     From Note~1 (spectral admissibility):
     \begin{itemize}
@@ -142,9 +159,9 @@
       $\Sigma_c$ with that dimension are open).
       \item $\ImH \cong \su(2)$ as the three-dimensional adjoint sector of that carrier
       (O23--O27); its reading as the spatial algebra is a bridge of Note~2, not an input.
-      \item SU(3) colour sector unconditional on the standard graph via the single-frequency
-      BI fingerprint mechanism of O31~v1.5~\cite{Beau2026a35}; numerical confirmation in
-      O32~\cite{Beau2026a36}.
+      \item No $\SU(3)$ colour-sector input. The single-frequency fingerprint mechanism that
+      supplied it is withdrawn (O31~\cite{Beau2026a35}), and O32~\cite{Beau2026a36} supplies
+      inter-triplet variance measurements, not the identification they were read as supporting.
     \end{itemize}
 
     From Note~2 (emergent geometry):
@@ -165,65 +182,82 @@ not from a dynamics of $\chi$.
     \end{remark}
 
     \begin{remark}[Scope: gauge group identification only]
-This sub-programme closes the identification $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$.
-It does not derive the Yang--Mills equations or the gauge--gravity coupling ratio.
-Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
+This sub-programme concerns the identification of $\Gpi$, which it does not achieve.
+It does not derive the Yang--Mills equations or the gauge--gravity coupling ratio either; those
+belong to Note~8 (Gauge--Gravity Stratification Sub-Programme), which takes $\Gpi$ as an input and
+therefore inherits the gap recorded here.
     \end{remark}
 
   \section{Logical Chain of the Sub-Programme}
     \label{sec:chain}
 
-    The derivation chain has four stages.
+    The chain runs three stages and stops.
+    Its fourth stage is withdrawn at the source, and the composite it would have terminated in is
+    not established.
 
     \begin{equation}
       \label{eq:chain}
-      \underbrace{\Pi \simeq S^3}_{\text{fibre topology}}
-      \;\Longrightarrow\;
-      \underbrace{S^1 \hookrightarrow S^3 \to S^2}_{\text{Hopf fibration}}
-      \;\Longrightarrow\;
-      \underbrace{\UU(1)}_{\pi_1(S^1) \cong \mathbb{Z}}
-      \;\Longrightarrow\;
-      \underbrace{\su(2) \text{ from } \ImH}_{\text{O23, O27}}
-      \;\Longrightarrow\;
-      \underbrace{\SU(2)}_{\text{O27--O30, Q6a}}
-      \;\Longrightarrow\;
-      \underbrace{\SU(3)}_{\text{O31--O32}}.
+      \begin{aligned}
+        &\underbrace{\Pi \simeq S^3}_{\text{fibre topology}}
+        \;\Longrightarrow\;
+        \underbrace{S^1 \hookrightarrow S^3 \to S^2}_{\text{Hopf fibration}}
+        \;\Longrightarrow\;
+        \underbrace{\UU(1)}_{\pi_1(S^1) \cong \mathbb{Z}} \\[1.2em]
+        &\underbrace{\su(2) \text{ from } \ImH}_{\text{supplied carrier, O23}}
+        \;\Longrightarrow\;
+        \underbrace{\SU(2)}_{\text{conditional}}
+        \;\not\Longrightarrow\;
+        \underbrace{\SU(3)}_{\text{withdrawn}}
+      \end{aligned}
     \end{equation}
 
-    The three factors arise from distinct structural mechanisms.
+    The arrows are of unequal type, and the last one is absent rather than weak.
 
     \begin{enumerate}
       \item \textit{$\UU(1)$ from the Hopf phase fibre.}
-      The projection fibre $\Pi \simeq S^3$ carries a canonical Hopf fibration
-      $S^1 \hookrightarrow S^3 \to S^2$.
-      The circle fibre $S^1$ supports a $\UU(1)$ phase symmetry whose winding number
-      $w \in \pi_1(S^1) \cong \mathbb{Z}$ is the topological origin of electric charge.
-      This is a structural result: it follows from the minimal compact geometry required to
-      support non-injective stable projections (TopologicalInvariants~\cite{Beau2026k}).
+      The projection fibre is taken to be $\Pi^{-1}(O_n) \simeq S^3$, carrying a canonical Hopf
+      fibration $S^1 \hookrightarrow S^3 \to S^2$; the circle fibre $S^1$ supports a $\UU(1)$
+      phase symmetry with winding number $w \in \pi_1(S^1) \cong \mathbb{Z}$.
+      Two premises here are structural inputs and not results.
+      The identification of the fibre with $S^3$ is imported from the white paper and carried by
+      TopologicalInvariants~\cite{Beau2026k} without proof; the note's own §\ref{sec:inputs}
+      identifies the same fibre with the Weil representation $V_\rho$ after Foundation~M, and the
+      two identifications are reconciled only through the supplied carrier $V_\rho \cong
+      \mathbb{C}^2$, whose unit sphere is $S^3$.
+      And the identification of the $S^1$ phase with \emph{electric charge} is likewise taken as
+      structural input there, not re-derived.
+      What TopologicalInvariants Proposition~3.1 then gives, on those inputs, is
+      $q_{\mathrm{eff}} = w \cdot e$.
+      The $\UU(1)$ sector is the one of the three that neither withdrawal reaches, because it is
+      argued in the topological layer and not in O31; that is a statement about its independence
+      from the withdrawals, not a claim that its premises are derived.
 
-      \item \textit{$\SU(2)$ from quaternionic admissibility.}
-      The admissible sector is $V_\rho \cong \mathbb{C}^2$ (spin-$\tfrac{1}{2}$).
-      The unique associative non-commutative minimal algebra compatible with admissibility
-      is $\mathbb{H}$ (O23); $\dim_\mathbb{R} \ImH = 3$ forces three internal directions.
-      Any admissible morphism $\Phi_{q,\rho}$ necessarily factors through $\su(2)$
-      (O27, quaternionic rigidity theorem).
-      The identification chain is:
-      \[
-        \text{emergence}
-        \Rightarrow \su(2)\;[\text{O27}]
-        \Rightarrow \text{pair data} \in \Sym(V_\rho, \mathbb{C})\;[\text{O29}]
-        \Rightarrow r_{\mathrm{eff}} = 3
-        \Rightarrow d_\rho = 2\;[\text{O29}].
-      \]
+      \item \textit{$\su(2)$ under a supplied carrier.}
+      If the admissible neutral sector is carried by an irreducible two-dimensional unitary
+      representation $V_\rho \cong \mathbb{C}^2$, a supplied input, then its traceless sector is
+      $\su(2) \cong \ImH$ with $\dim_\mathbb{R} \ImH = 3$ (O23~\cite{Beau2026a27}, Theorem~3.1).
+      O27~\cite{Beau2026a31} shows that a morphism whose kernel contains
+      $\ker \Pi_{\mathrm{adm}}$ factors uniquely, as a real-linear map, through the admissibility
+      quotient, and that the \emph{complex} intertwiner space of the representation action is
+      one-dimensional.
+      Identifying that quotient with $\su(2)$ is the carrier supplied by O23 under an open bridge
+      there, not a consequence of the admissibility constraints, and the vector lift into
+      $V_\rho$ remains open.
+      The $\SU(2)$ sector is therefore conditional throughout.
 
-      \item \textit{$\SU(3)$ from colour-triplet co-admissibility.}
-      The metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
-      co-admissibility unconditionally for the colour-adapted Cayley graph (O31).
-      $\SU(3)$ is the symmetry group of co-admissible colour triplets
-      $\{V_c, V_{\omega c}, V_{\omega^2 c}\}$ with $\omega^3 \equiv 1 \pmod q$,
-      $q \equiv 1 \pmod 3$.
-      On the standard graph, the identification holds at the rank, averaged,
-      effective-exponent, and numerical levels.
+      \item \textit{$\SU(3)$: withdrawn.}
+      The colour-triplet route is withdrawn at its source.
+      O31~\cite{Beau2026a35} withdraws the uniqueness of $\SU(3)$, the irreducibility of the
+      admissible transformation group, the co-admissibility of the individual profiles
+      $\sigma_{c_i}$, the arithmetic criterion, the metaplectic identity as used, the
+      $\Delta(27)$ spectral proposition, a mistyped rank test, and every derivation of a gauge
+      factor.
+      Three counterexamples are given there in full: $\SO(3) \subset \SU(3)$ acts irreducibly on
+      $\mathbb{C}^3$ with determinant one, so those two conditions never single out $\SU(3)$; the
+      diagonal torus $T^2 \subset \SU(3)$ satisfies every imposed constraint while acting
+      reducibly; and $\{1, 2, q-3\}$ is an admissible colour triplet for every prime $q \geq 7$,
+      so triplets do not require $q \equiv 1 \pmod 3$.
+      Nothing positive about $\SU(3)$ is asserted in this note.
     \end{enumerate}
 
   \section{Constituent Papers}
@@ -244,8 +278,11 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       $S^1 \hookrightarrow S^3 \xrightarrow{\pi_H} S^2$.
       Three results are established.
       (i)~Electric charge arises from $\pi_1(S^1) \cong \mathbb{Z}$: the winding number
-      $w \in \mathbb{Z}$ is the topological invariant, giving $q_{\mathrm{eff}} = w \cdot e$.
-      This is proved on the canonical admissible model (Proposition~3.1).
+      $w \in \mathbb{Z}$ is the topological invariant, giving $q_{\mathrm{eff}} = w \cdot e$
+      (Proposition~3.1).
+      That proposition does not invoke the canonical admissible model; its undischarged inputs are
+      the identification of the fibre with $S^3$ and the identification of the $S^1$ phase with
+      electric charge, both carried as structural input there.
       (ii)~On the canonical admissible model, the bounded-flux constraint removes the polar
       regions of the Hopf base $S^2$, reducing the admissible base to an annulus with
       $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ (Proposition~4.1): no isolated magnetic monopoles
@@ -253,10 +290,14 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       (iii)~Parity violation is interpreted as projective chirality: an orientation dependence of
       admissibility under $\Pi$, which selects one handedness of winding invariants.
 
-      \textbf{Q6a}~\cite{Beau2026q6a} derives the gauge group $\Gpi$, gauge charges, and the
-      Yang--Mills principal bundle from the fibre structure of $\Pi$.
+      \textbf{Q6a}~\cite{Beau2026q6a} constructs the gauge charges and the Yang--Mills principal
+      bundle from the fibre structure of $\Pi$.
+      Its derivation of $\Gpi$ relies on the withdrawn O31 material and is not available here.
       The $\UU(1)$ factor is identified as the phase sector of the Weil representation,
       arising from the canonical symplectic structure of $V_\rho$ and its metaplectic lift.
+      That standard lift is a different object from the specific ``metaplectic identity as used''
+      that O31 withdraws, which changes the central character while the automorphism it invokes
+      fixes the centre.
       Q6a constructs the admissible principal bundle $P_{\Gpi}(M, \Gpi)$ with structure group
       $\Gpi$ and connection $A \in \Omega^1(P, \mathfrak{g}_\Pi)$.
 
@@ -280,32 +321,40 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       The threshold $\Sigma_c(n_3) = 3$ is a supplied selection rule: the carrier selection
       and the identification of $\Sigma_c$ with that dimension are open bridges.
 
-      \textbf{O27}~\cite{Beau2026a31} proves the quaternionic rigidity theorem: every admissible
-      morphism $\Phi_{q,\rho}$ necessarily factors through $\su(2)$.
-      This is the analytical cornerstone of the $\SU(2)$ identification.
-      It is proved unconditionally (Theorem~4.1 of O27), without reference to the bridge
-      conjecture or the finite-$q$ structure.
+      \textbf{O27}~\cite{Beau2026a31} proves that a morphism whose kernel contains
+      $\ker \Pi_{\mathrm{adm}}$ factors uniquely, as a real-linear map, through the admissibility
+      quotient, and that under the supplied carrier the \emph{complex} intertwiner space of the
+      representation action $\rho \colon \su(2) \to \mathrm{End}(V_\rho)$ is one-dimensional, the
+      corresponding real-linear space having real dimension two (Theorem~4.1 there).
+      Identifying the quotient with $\su(2)$ is the carrier supplied by O23, not a consequence of
+      the admissibility constraints, and there is no non-zero $\su(2)$-equivariant map from the
+      adjoint to the fundamental, so the vector lift into $V_\rho$ is open.
+      This is a factorisation statement, not a rigidity theorem, and it is conditional.
 
       \textbf{O28}~\cite{Beau2026a32} establishes asymptotic calibration: the covariance
-      $\mathcal{C}_c$ in $\mathrm{End}(H_{\mathrm{eff}})$ has rank exactly 3 for every conjugate
+      $\mathcal{C}_c$ in $\mathrm{End}(H_{\mathrm{eff}})$ has $1\%$ threshold rank 3 for every conjugate
       pair at $q \in \{61, 101, 151\}$, with invariant eigenvalue structure
-      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$ (the exact value $\lambda_1/\lambda_2 = 2$ is derived
-      analytically in O30).
+      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
+      This is a measured ratio.
 
-      \textbf{O29}~\cite{Beau2026a33} identifies the carrier $H_{\mathrm{eff}} \cong \mathrm{Sym}^2(V_\rho)$
-      (spin-$1$): $r_{\mathrm{eff}} = 3$ confirmed for $q \in \{61, 101, 151\}$, with $d_\rho = 2$ the
-      spin-$\tfrac{1}{2}$ square-root doublet recovered via the Veronese structure.
+      \textbf{O29}~\cite{Beau2026a33} reports $r_{\mathrm{eff}} = 3$ for
+      $q \in \{61, 101, 151\}$ and, in its published statement, identifies the carrier
+      $H_{\mathrm{eff}} \cong \Sym^2(V_\rho)$.
+      That statement is cited here as published; this note takes no position on it.
+      The doublet dimension $d_\rho = 2$ is a minimality selection of O26 throughout this note, not
+      a measurement.
 
-      \textbf{O30}~\cite{Beau2026a34} derives analytically the invariant eigenvalue ratio
-      $\lambda_1/\lambda_2 = 2$: Born--Infeld parity anti-linearity forces an equatorial
-      constraint on the admissible fibre.
-      The factor of two is purely structural (squared symmetric-tensor normalisation of the
-      central Carnot generator $Z = [X, Y]$).
+      \textbf{O30}~\cite{Beau2026a34} gives an analytical account of the ratio
+      $\lambda_1/\lambda_2 = 2$ from a Born--Infeld parity constraint on the admissible fibre.
+      Its published statement is cited here as published; this note takes no position on it, and
+      it is not load-bearing for anything asserted below.
 
-      \textbf{Q6a}~\cite{Beau2026q6a} closes the $\SU(2)$ identification at the level of the
-      admissible principal bundle: the $\SU(2)$ factor is the structure group of the
-      non-abelian fibre sector corresponding to the spin-$\tfrac{1}{2}$ module.
-      The associated connection is the admissible gauge field.
+      \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the admissible
+      principal bundle, taking it as the structure group of the non-abelian fibre sector
+      corresponding to the spin-$\tfrac{1}{2}$ module, with the associated connection as the
+      admissible gauge field.
+      That construction presupposes the sector rather than closing it, so it inherits the
+      conditionality of the supplied carrier.
 
       \textbf{Q7}~\cite{Beau2026q7} establishes that the three-dimensional internal space
       $H_{\mathrm{eff}} = \Sym^2(V_\rho)$ carries the unique irreducible $\su(2)$-module of
@@ -321,94 +370,103 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       Gauge charges are identified as holonomy invariants of the admissible connection $A$.
       The derivation is structural and does not require the Yang--Mills equations.
 
-      \textbf{Q12}~\cite{Beau2026q12} identifies $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$
-      explicitly as the composite of orbit sub-bundles and extends $A_g$ to the Laplace-type
-      operator $A_{g,A}$ on the associated vector bundle.
-      The base--fibre decomposition and the horizontal--vertical decoupling lemma
-      (Lemma~1 of Q12) guarantee that the gauge sector $a_4$ and the gravitational sector
-      $a_2$ are independent.
+      \textbf{Q12}~\cite{Beau2026q12} takes $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ as the
+      composite of orbit sub-bundles --- an identification that rests on the withdrawn O31 material
+      and is not available here --- and extends $A_g$ to the Laplace-type operator $A_{g,A}$ on the
+      associated vector bundle.
+      Its Lemma~1, titled there \emph{Vertical variation at fixed base metric}, states under
+      minimal coupling --- the endomorphism $E$ not depending on the connection $A$ --- that the
+      vertical variation at fixed $g$ receives no $a_2$ contribution.
+      Q12 itself follows it with a remark titled \emph{No full horizontal--vertical decoupling}, so
+      it is not the stronger independence statement its usual name suggests.
 
       \textbf{TopologicalInvariants}~\cite{Beau2026k} places the charge identification within
       the topological layer: charge is a $\pi_1$ invariant; the absence of monopoles follows
       from $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical model.
 
-    \subsection{Colour-triplet co-admissibility and the \texorpdfstring{$\SU(3)$}{SU(3)} sector}
+    \subsection{The withdrawn \texorpdfstring{$\SU(3)$}{SU(3)} route}
       \label{sec:su3}
 
-      The $\SU(3)$ sector arises from the co-admissibility of Weil-block triplets under the
-      $\mathbb{Z}/3\mathbb{Z}$ symmetry of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ for
-      $q \equiv 1 \pmod 3$.
+      The colour-triplet route to $\SU(3)$ is withdrawn at its source and supplies nothing to this
+      sub-programme.
 
-      \textbf{O31}~\cite{Beau2026a35} develops the full $\SU(3)$ emergence framework.
-      Three results are established.
-      (i)~Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
-      co-admissibility unconditionally for the colour-adapted Cayley graph
-      $\mathrm{Cay}(G_q, S_q^{(3)})$ (proved).
-      (ii)~$\SU(3)$ is identified as the symmetry group of the co-admissible colour triplet
-      $\{V_c, V_{\omega c}, V_{\omega^2 c}\}$, proved for the standard graph via
-      $[{\mathrm{H\text{-}color}}]$ (Proposition~4.23 of O31, proved analytically).
-      (iii)~The spectral route to $[\mathrm{H\text{-}color}]$ is closed: exact generator-twist
-      isospectrality does not imply colour-triplet capacity profile equality (proved, closing
-      the spectral approach).
+      \textbf{O31}~\cite{Beau2026a35} is a withdrawal notice.
+      It withdraws eight results of its previous version: the uniqueness of $\SU(3)$ among
+      connected compact subgroups acting irreducibly on $\mathbb{C}^3$; the irreducibility of the
+      group of Born--Infeld-compatible fibre-preserving transformations; the co-admissibility of
+      the individual profiles $\sigma_{c_1}, \sigma_{c_2}, \sigma_{c_3}$; the criterion that colour
+      triplets exist if and only if $q \equiv 1 \pmod 3$; the metaplectic identity as used, which
+      changes the central character while the automorphism invoked fixes the centre; the
+      $\Delta(27)$ spectral proposition; a rank-eight test mistyped in $\mathrm{End}(\mathbb{C}^3)$,
+      where the dimension is nine; and every derivation of a gauge factor and of
+      $\SU(3) \times \SU(2) \times \UU(1)$ as a composite, the determinant-one condition, the
+      commutation of the putative factors and the direct-product structure included.
+      Its remaining scalar, arithmetic and discrete-group material, the generator-twist
+      isospectrality statement among it, is under re-audit and is not asserted there.
 
-      \textbf{O32}~\cite{Beau2026a36} provides the numerical test and the partial analytical
-      resolution of $[\mathrm{H\text{-}color}]$.
-      Four levels are established.
-      $[\mathrm{H\text{-}color}]_{\mathrm{rank}}$: sector rank equality
-      $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ proved unconditionally via
-      intra-coset Vandermonde symmetry (O31).
-      $[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: block-averaged capacity equality
-      $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$,
-      proved in O32 via the modulation frequency argument.
-      $[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: effective exponent equality
-      $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the $q \to \infty$ limit, proved in O32.
-      $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: exact profile equality at finite $q$,
-      proved analytically in O31 (Proposition~4.23) via the single-frequency fingerprint
-      structure: each O12 fingerprint vector carries frequency
-      $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation $B \mapsto \omega B$ is a
-      bijection of $\mathbb{Z}/q\mathbb{Z}$.
-      Numerical results: passes for $q \in \{61, 151, 211, 307\}$ ($q \equiv 1 \pmod 3$,
-      test primes); controls $q \in \{29, 101\}$ ($q \equiv 2 \pmod 3$) confirm noise floor.
+      Three counterexamples make the withdrawal unavoidable rather than cautionary.
+      $\SO(3) \subset \SU(3)$, the real orthogonal matrices of determinant one read as complex
+      matrices, is a proper connected compact subgroup whose action on $\mathbb{C}^3$ is
+      irreducible, so irreducibility together with determinant one never singles out $\SU(3)$.
+      The diagonal torus $T^2 \subset \SU(3)$ satisfies every constraint that was imposed while
+      preserving the three coordinate lines, so it acts reducibly; requiring each sector to be
+      mapped to itself in fact forces reducibility.
+      And $\{1, 2, q-3\}$ is an admissible colour triplet under the published definition for every
+      prime $q \geq 7$, so the arithmetic criterion is false; $q = 11$ admits $\{1, 2, 8\}$ with
+      $11 \equiv 2 \pmod 3$.
+
+      \textbf{O32}~\cite{Beau2026a36} remains a numerical campaign.
+      It is cited here for what it measures: inter-triplet variance ratios $R_{\mathrm{var}}$ at or
+      below a control-calibrated noise floor for $q \in \{61, 151, 211, 307\}$, against controls
+      $q \in \{29, 101\}$.
+      Its Proposition~1, a modulation-frequency argument giving
+      $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$, is an O32 result
+      that O31 does not withdraw; it is cited as published and is not affected by anything here.
+      Those results stand.
+      What does not stand is the reading of them as confirming a hypothesis whose consequence,
+      the $\SU(3)$ identification, has been withdrawn: a variance ratio at the noise floor is
+      evidence about profile equality, not about a symmetry group.
 
     \subsection{Boundary with Yang--Mills dynamics}
       \label{sec:ym-boundary}
 
-      The gauge structure sub-programme identifies $\Gpi$ and constructs the admissible
-      principal bundle.
-      It does not derive the Yang--Mills equations.
+      The gauge structure sub-programme concerns the identification of $\Gpi$, which it does not
+      achieve, and constructs the admissible principal bundle over an open structure group.
+      It does not derive the Yang--Mills equations either.
       That derivation belongs to the gauge--gravity spectral stratification sub-programme
       (Presentation Note~8), where the vertical variation of the joint spectral entropy
       functional $\mathcal{S}_\Pi[g, A]$ yields the $a_4$ Yang--Mills response.
 
       The logical boundary is sharp: Q6a and Q12 are constituent papers of the gauge
-      structure sub-programme in so far as they identify the gauge group and construct
+      structure sub-programme in so far as they address the gauge group and construct
       the bundle.
       Q12 and Q13 become constituent papers of Note~8 in so far as they derive the
       Yang--Mills equations and the gauge--gravity coupling.
 
-      The $a_4$-level result of Q12 (Theorem~1) depends on the gauge group $\Gpi$ as
-      an input from Q6a and the O-series.
-      It depends on $[\mathrm{H\text{-}color}]$ for the $\SU(3)$ sector in exactly the
-      same way as the gauge group identification, with $[\mathrm{H\text{-}color}]$ now
-      proved by Proposition~4.23 of O31~\cite{Beau2026a35}.
+      The $a_4$-level result of Q12 (Theorem~1) depends on the gauge group $\Gpi$ as an input
+      from Q6a and the O-series.
+      Since $\Gpi$ is not established, that dependency is now an open input rather than a supplied
+      one, and Q12's $\SU(3)$ sector in particular rests on a withdrawn derivation.
 
       \begin{table}[ht]
         \centering
         \caption{Summary of constituent papers by sector.
-        Status: P = proved; S = structural; N = numerical; O = open.}
+        Status: P = proved; S = structural; N = numerical; C = conditional; O = open;
+        W = withdrawn at the source.}
         \label{tab:papers}
         \renewcommand{\arraystretch}{1.2}
-        \begin{tabular}{@{}lllll@{}}
+        \begin{tabular}{@{}llll@{}}
           \toprule
           Sector & Papers & Central output & Status \\
           \midrule
-          $\UU(1)$ fibre & Foundation, TopInv & Charge $= w \cdot e$; no monopoles & P (canonical) \\
+          $\UU(1)$ fibre & Foundation, TopInv & Charge $= w \cdot e$, on imported inputs & S \\
+          Monopole exclusion & TopInv & $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model & P \\
           $\UU(1)$ bundle & Q6a, Q12 & Admissible $\UU(1)$ connection & S \\
-          $\SU(2)$ sector & O23, O27--O30, Q6a, Q7 & $d_\rho = 2$; $\su(2)$ closed & P \\
+          $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
           Charges & Q6a, TopInv, Q12 & Bundle structure; holonomy charges & S \\
-          $\SU(3)$ adapted & O31 & Triplet co-admissibility & P \\
-          $\SU(3)$ standard & O31--O32 & $[\mathrm{H\text{-}color}]_{\mathrm{rank/avg/eff/pointwise}}$ & P \\
-          $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ & O31 & Proved analytically (Prop.~4.23) & P \\
+          $\SU(3)$, either graph & O31 & Triplet co-admissibility route & W \\
+          Triplet variance ratios & O32 & $R_{\mathrm{var}}$ at the noise floor & N \\
+          $\Gpi$ as a composite & O31 & Direct-product structure & W \\
           \bottomrule
         \end{tabular}
       \end{table}
@@ -433,7 +491,7 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       From Note~1 (O23, O27, O29), as supplied inputs: the admissible sector is taken to be
       carried by $V_\rho \cong \mathbb{C}^2$ (supplied carrier, not derived);
       $\ImH \cong \su(2)$ is the three-dimensional adjoint sector of that carrier (O23,
-      Theorem~3.1); the threshold $\Sigma_c(n_3) = 3$ and the selection $d_\rho = 2$ are
+      Theorem~3.1); the threshold $\Sigma_c(n_3) = 3$ and the minimality selection $d_\rho = 2$ are
       supplied selection rules, their derivation from admissibility being open.
 
       \item \textbf{Effective geometry.}
@@ -453,13 +511,13 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
         \toprule
         Output & Consumer & Status \\
         \midrule
-        $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & Q12, Q13, Q14 & P (O31~v1.5) \\
+        $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & Q12, Q13, Q14 & W (withdrawn, O31) \\
         Charge/mass/inertia as saturated responses & SMchargemass~\cite{Beau2026e} & S \\
-        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q12, Q13 & S \\
-        Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & Q14, applications & P (canonical) \\
+        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q12, Q13 & S, on an open $\Gpi$ \\
+        Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & Q14, applications & S (imported inputs) \\
         Absence of magnetic monopoles & Q14 & P (canonical) \\
-        $d_\rho = 2$, $\su(2)$ closure & Q14, Q12, Q13 & P \\
-        $\SU(3)$ at $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ level & Q12, Q13, O31 & P (exact at finite $q$) \\
+        $\su(2)$ sector under a supplied carrier & Q14, Q12, Q13 & C \\
+        $\SU(3)$ colour sector & Q12, Q13 & W (withdrawn, O31) \\
         Projective chirality & Q14 & S \\
         \bottomrule
       \end{tabular}
@@ -472,170 +530,199 @@ Those results belong to Note~8 (Gauge--Gravity Stratification Sub-Programme).
       \label{sec:proved}
 
       \begin{enumerate}
-        \item \textit{Charge quantisation on the canonical model}
-        (TopologicalInvariants~\cite{Beau2026k}, Proposition~3.1):
-        $q_{\mathrm{eff}} = w \cdot e$ with $w \in \mathbb{Z} = \pi_1(S^1)$.
-
         \item \textit{Absence of magnetic monopoles on the canonical model}
         (TopologicalInvariants, Proposition~4.1 and Corollary~5.1):
         $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical admissible model;
         no isolated magnetic charge is topologically admissible.
 
-        \item \textit{Neutral-sector dimension} (O23~\cite{Beau2026a27}):
+        \item \textit{Neutral-sector dimension under a supplied carrier}
+        (O23~\cite{Beau2026a27}, Theorem~3.1):
         the traceless sector of the supplied spinor carrier is $\su(2) \cong \ImH$ with
-        $\dim_\mathbb{R} \ImH = 3$ (Theorem~3.1); $\Sigma_c(n_3) = 3$ is a supplied
-        selection rule, with the carrier selection and the observable identification open.
+        $\dim_\mathbb{R} \ImH = 3$.
+        The carrier selection, and the identification of $\Sigma_c(n_3) = 3$ with that dimension,
+        are open bridges of O23.
 
-        \item \textit{Quaternionic rigidity} (O27~\cite{Beau2026a31}, Theorem~4.1):
-        every admissible morphism $\Phi_{q,\rho}$ factors through $\su(2)$, proved
-        unconditionally.
+        \item \textit{Vertical variation at fixed base metric} (Q12~\cite{Beau2026q12}, Lemma~1):
+        under minimal coupling, the vertical variation at fixed $g$ receives no $a_2$ contribution.
+        Q12 states separately that full horizontal--vertical decoupling does \emph{not} hold.
+        The lemma does not depend on which group occupies the gauge sector, which is why it survives
+        the withdrawal.
+      \end{enumerate}
 
-        \item \textit{Carrier identification} (O29~\cite{Beau2026a33}):
-        $r_{\mathrm{eff}} = 3$ identifies the spin-$1$ carrier $H_{\mathrm{eff}} \cong \mathrm{Sym}^2(V_\rho)$;
-        $d_\rho = 2$ (spin-$\tfrac{1}{2}$ square-root), confirmed for $q \in \{61, 101, 151\}$.
+    \subsection{Conditional results}
+      \label{sec:conditional}
 
-        \item \textit{Eigenvalue ratio $\lambda_1/\lambda_2 = 2$}
-        (O30~\cite{Beau2026a34}): analytically derived from the equatorial fibre constraint.
+      \begin{enumerate}
+        \item \textit{Factorisation through the admissibility quotient}
+        (O27~\cite{Beau2026a31}, Theorem~4.1):
+        a morphism whose kernel contains $\ker \Pi_{\mathrm{adm}}$ factors uniquely, as a
+        real-linear map, through the admissibility quotient, and the \emph{complex} intertwiner
+        space of the representation action is one-dimensional under the supplied carrier.
+        Identifying the quotient with $\su(2)$ is supplied by O23 and rests, in O27, on the
+        admissible-saturation hypothesis, not derived; O27 carries a second hypothesis, parity
+        transport, for the involution's descent.  The vector lift into $V_\rho$ is open.
 
-        \item \textit{Triplet co-admissibility on the colour-adapted graph}
-        (O31~\cite{Beau2026a35}): metaplectic intertwining forces unconditional co-admissibility
-        for $\mathrm{Cay}(G_q, S_q^{(3)})$.
-
-        \item \textit{Generator-twist isospectrality} (O31, proved):
-        the spectral route to $[\mathrm{H\text{-}color}]$ is closed.
-
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$}
-        (O31): intra-coset Vandermonde symmetry gives rank equality unconditionally.
-
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$}
-        (O32~\cite{Beau2026a36}, Proposition~1): modulation frequency argument gives
-        $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$.
-
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$} (O32):
-        effective exponent equality $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the
-        $q \to \infty$ limit.
-
-        \item \textit{Horizontal--vertical decoupling} (Q12~\cite{Beau2026q12}, Lemma~1):
-        the Einstein sector $a_2$ and the Yang--Mills sector $a_4$ are independent under the
-        joint spectral entropy; the gauge group structure does not affect the gravitational
-        response at leading order.
+        \item \textit{$\SU(2)$ bundle sector} (Q6a~\cite{Beau2026q6a}):
+        the $\SU(2)$ factor is taken as the structure group of the non-abelian fibre sector, with
+        the admissible gauge field as the associated connection.
+        The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
     \subsection{Structural results}
       \label{sec:structural}
 
       \begin{enumerate}
+        \item \textit{Charge quantisation}
+        (TopologicalInvariants~\cite{Beau2026k}, Proposition~3.1):
+        $q_{\mathrm{eff}} = w \cdot e$ with $w \in \mathbb{Z} = \pi_1(S^1)$, on two structural
+        inputs that TopologicalInvariants carries rather than derives: the identification of the
+        projection fibre with $S^3$, and the identification of the $S^1$ phase with electric charge.
+        Proposition~3.1 does not invoke the canonical admissible model; that restriction belongs to
+        the monopole results below.
+
         \item \textit{$\UU(1)$ as phase fibre} (Foundation, Q6a):
-        the $\UU(1)$ factor is the phase symmetry of the canonical symplectic structure
+        the $\UU(1)$ sector is the phase symmetry of the canonical symplectic structure
         of $V_\rho$.
         The identification is structural; it follows from the Weil representation and is not a
         separate postulate.
 
-        \item \textit{$\SU(2)$ bundle sector} (Q6a):
-        the $\SU(2)$ factor is the structure group of the non-abelian fibre sector;
-        the admissible gauge field is the associated connection.
-
-        \item \textit{$\SU(3)$ on the standard graph} (O31~v1.5, Proposition~4.23,
-        unconditional via single-frequency BI fingerprint):
-        $\SU(3)$ is the symmetry group of the co-admissible colour triplet for
-        $q \equiv 1 \pmod 3$.
-        The identification $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ holds unconditionally
-        on the standard graph and is structural at the orbit-size level (orbit sizes 3, 2, 1
-        respectively).
+        \item \textit{Gauge charges as holonomy invariants} (Q6a): the admissible connection
+        $A$ and its curvature $F_{\mu\nu}$ encode gauge charges as holonomy classes of the
+        bundle, on a structure group that is not established.
 
         \item \textit{Projective chirality and parity} (TopologicalInvariants, §6):
         parity violation arises from the orientation dependence of admissibility under $\Pi$;
         the $V - A$ structure is identified as the maximal chirality class
         (partial structural result).
-
-        \item \textit{Gauge charges as holonomy invariants} (Q6a): the admissible connection
-        $A$ and its curvature $F_{\mu\nu}$ encode gauge charges as holonomy classes of the
-        bundle.
       \end{enumerate}
 
     \subsection{Numerical evidence}
       \label{sec:numerical}
 
       \begin{enumerate}
-        \item \textit{$r_{\mathrm{eff}} = 3$ and $d_\rho = 2$} (O28--O29):
-        confirmed at $q \in \{61, 101, 151\}$ with zero inter-pair variance for
+        \item \textit{$1\%$ threshold rank 3} (O28--O29):
+        measured at $q \in \{61, 101, 151\}$ with zero inter-pair variance for
         $q \in \{61, 151\}$.
+        The doublet dimension $d_\rho = 2$ is a minimality selection of O26 (§\ref{sec:inputs}),
+        not a measurement.
 
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$} (O32):
-        numerical passage for $q \in \{61, 151, 211, 307\}$ with variance ratio
-        $R_{\mathrm{var}}(q)$ decreasing toward zero.
+        \item \textit{Inter-triplet variance ratios} (O32~\cite{Beau2026a36}):
+        $R_{\mathrm{var}}$ at or below a control-calibrated noise floor for
+        $q \in \{61, 151, 211, 307\}$, controls $q \in \{29, 101\}$.
+        Evidence about profile equality, not about a symmetry group.
+      \end{enumerate}
+
+    \subsection{Withdrawn}
+      \label{sec:withdrawn}
+
+      The following are withdrawn on the authority of the withdrawal notice
+      O31~\cite{Beau2026a35}, and are therefore not asserted here.
+
+      \begin{enumerate}
+        \item \textit{The $\SU(3)$ identification}, on the colour-adapted graph and on the
+        standard graph alike, at every analytical level.
+        \item \textit{Triplet co-admissibility} as a proved consequence of metaplectic
+        intertwining.
+        \item \textit{The arithmetic criterion} that colour triplets require $q \equiv 1 \pmod 3$.
+        \item \textit{Generator-twist isospectrality} as a proved closure of the spectral route;
+        it is under re-audit at the source and is not asserted.
+        \item \textit{$[\mathrm{H\text{-}color}]$ at the rank level} via intra-coset Vandermonde
+        symmetry, which belongs to the material under re-audit.
+        \item \textit{The composite} $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$, together with
+        the determinant-one condition, the commutation of the putative factors and the
+        direct-product structure.
       \end{enumerate}
 
     \subsection{Open hypotheses}
       \label{sec:open-hyp}
 
       \begin{enumerate}
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}:
-        proved analytically in O31 (Proposition~4.23) via the single-frequency structure
-        of the O12 fingerprint: each vector carries frequency
-        $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation $B \mapsto \omega B$ is
-        a bijection of $\mathbb{Z}/q\mathbb{Z}$, so
-        $\sigma_c(n) = \sigma_{\omega c}(n) = \sigma_{\omega^2 c}(n)$ holds exactly.
-        The $\SU(3)$ identification on the standard graph is therefore fully unconditional.
+        \item \textit{Any route to $\SU(3)$.} No mechanism is currently available.
+        The colour-triplet route is withdrawn, and the counterexamples of O31 close the specific
+        arguments rather than merely leaving them unfinished.
+
+        \item \textit{Any route to a composite $\Gpi$.} Even granting $\UU(1)$ and a conditional
+        $\SU(2)$, nothing establishes that they are factors of a single group, that the factors
+        commute, or that the structure is a direct product.
 
         \item \textit{$\pi_2(\Ceff) = 0$ on the full configuration space}
         (TopologicalInvariants, Remark~4.2):
-        the monopole exclusion is proved on the canonical model.
-        Extension to the full effective configuration space $\Ceff$ is open.
+        the monopole exclusion is proved on the canonical model; extension to the full effective
+        configuration space $\Ceff$ is open.
 
         \item \textit{Maximal chirality ($V - A$)} (TopologicalInvariants, Remark~6.2):
-        projective chirality is established as a structural mechanism.
-        Its identification with the specific $V - A$ structure of the weak interaction remains
-        qualitative.
+        projective chirality is established as a structural mechanism; its identification with the
+        specific $V - A$ structure of the weak interaction remains qualitative.
       \end{enumerate}
 
   \section{Open Deliverables}
     \label{sec:open}
 
-    Three open items define the boundary of the sub-programme.
+    \textbf{Open deliverable 1: a route to $\SU(3)$.}
+    The colour-triplet route is withdrawn and its specific arguments are refuted by
+    counterexample, not merely left incomplete.
+    A replacement would have to supply a mechanism that singles out $\SU(3)$ among the connected
+    compact subgroups acting irreducibly on $\mathbb{C}^3$, which irreducibility and determinant
+    one demonstrably do not, and it would have to do so without the withdrawn metaplectic step.
 
-    \textbf{Closed: $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$.}
-    All four levels of $[\mathrm{H\text{-}color}]$ are now established analytically.
-    The $\SU(3)$ identification on the standard graph is fully unconditional:
-    the single-frequency structure of the O12 fingerprint (Lemma~4.22 of O31) gives
-    $\sigma_c(n) = \sigma_{\omega c}(n) = \sigma_{\omega^2 c}(n)$ exactly at finite~$q$
-    (Proposition~4.23 of O31~\cite{Beau2026a35}),
-    completing the identification of $\Gpi$ without any residual conditionality.
+    \textbf{Open deliverable 2: a route to a composite gauge group.}
+    Suppose $\UU(1)$ and a conditional $\SU(2)$ are granted.
+    Nothing establishes that they are factors of one group acting on one fibre, that they commute,
+    or that the composite is a direct product.
+    O31 withdrew each of those three separately, and this note asserts none of them.
 
-    \textbf{Open deliverable 2: $\pi_2(\Ceff) = 0$ in general.}
-    The topological exclusion of magnetic monopoles is proved on the canonical admissible
-    model.
+    \textbf{Open deliverable 3: $\pi_2(\Ceff) = 0$ in general.}
+    The topological exclusion of magnetic monopoles is proved on the canonical admissible model.
     Extension to the full $\Ceff$ is a well-posed open problem in homotopy theory.
 
-    \textbf{Open deliverable 3: $V - A$ maximality from admissibility.}
+    \textbf{Open deliverable 4: $V - A$ maximality from admissibility.}
     The structural mechanism for projective chirality is identified.
-    Its derivation of the specific $V - A$ form of the weak interaction current from
-    admissibility data is an open analytical problem.
+    Deriving the specific $V - A$ form of the weak interaction current from admissibility data is
+    an open analytical problem.
 
   \section{Conclusion}
     \label{sec:conclusion}
 
-    The gauge structure sub-programme identifies the admissible internal symmetry group
-    $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ as a forced output of the admissibility
-    constraints on the projection fibre $\Pi$.
+    The gauge structure sub-programme does not identify an admissible internal symmetry group.
 
-    The three factors have distinct origins and distinct analytical status.
-    $\UU(1)$ arises from the Hopf phase fibre of $\Pi \simeq S^3$; charge quantisation
-    follows from $\pi_1(S^1) \cong \mathbb{Z}$.
-    $\SU(2)$ arises from the supplied spinor carrier, whose neutral sector is
-    $\su(2) \cong \ImH$ (O23 Theorem~3.1), and the rigidity theorem of O27; its closure is
-    conditional on that carrier.
-    $\SU(3)$ arises from the metaplectic co-admissibility of Weil-block colour triplets;
-    it is established unconditionally on the colour-adapted graph and at all four analytical
-    levels ($[\mathrm{H\text{-}color}]_{\mathrm{rank}}$, $[\mathrm{H\text{-}color}]_{\mathrm{avg}}$,
-    $[\mathrm{H\text{-}color}]_{\mathrm{eff}}$, $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$)
-    on the standard graph, the last via Proposition~4.23 of O31~\cite{Beau2026a35}.
-    The sub-programme closes the gauge group identification without residual conditionality.
+    Of its three sectors, one is structural, one is conditional and one is withdrawn.
+    $\UU(1)$ arises from the Hopf phase fibre of $\Pi \simeq S^3$, with charge quantisation
+    following from $\pi_1(S^1) \cong \mathbb{Z}$ on two premises carried as structural input; the
+    monopole exclusion is the result that holds on the canonical admissible model.
+    $\SU(2)$ arises from the spinor carrier supplied by O23, whose neutral sector is
+    $\su(2) \cong \ImH$; O27 supplies factorisation through the admissibility quotient and a
+    one-dimensional \emph{complex} intertwiner space, while the identification of that quotient with
+    $\su(2)$
+    remains supplied rather than derived.
+    $\SU(3)$ has no surviving route: O31 withdraws the uniqueness, the irreducibility, the
+    co-admissibility of the individual profiles, the arithmetic criterion, the metaplectic step and
+    every derivation of a gauge factor, with three counterexamples given in full.
 
-    This sub-programme closes the gauge group identification.
-    It does not derive Yang--Mills dynamics: the $a_4$ Yang--Mills response from the
-    vertical variation of the spectral entropy belongs to Note~8
+    The composite $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is therefore not established, and
+    neither are the determinant-one condition, the commutation of the putative factors, nor the
+    direct-product structure.
+    Downstream results that take $\Gpi$ as a derived input inherit this gap; the affected
+    statements are in Q12, Q13, Q14 and in the notes that cite this one for the gauge group.
+
+    This note does not derive Yang--Mills dynamics, which belongs to Note~8
     (Gauge--Gravity Stratification).
+    Note~8's gauge-group input is open.
+
+    \subsection*{Interpretive outlook}
+
+    What follows is a structural reading, offered as interpretation and not as a result.
+
+    The ambition of a gauge sub-programme is that gauge structure be not postulated but forced:
+    that the Standard Model group fall out of admissibility.
+    What is available is weaker and more specific.
+    Non-injectivity does give a non-trivial fibre, and a fibre does carry a phase symmetry, so the
+    reading of gauge freedom as residual fibre symmetry is intact as a reading.
+    What is not available is the inference from that reading to any particular group.
+    The withdrawn arguments failed in a characteristic way: they imposed conditions that a target
+    group satisfies and concluded that the target was thereby singled out, which
+    $\SO(3) \subset \SU(3)$ and the diagonal torus each refute directly.
+    A future route will have to identify a group by an argument that excludes its subgroups, not
+    merely by one that the group passes.
 
     \newpage
     \bibliographystyle{plain}
