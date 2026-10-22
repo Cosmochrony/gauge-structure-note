@@ -173,7 +173,8 @@
       with no metric coefficient supplied.
       Under the unestablished spatial-limit hypothesis [H-L] and the open lifting hypothesis
       [H-lift], Q5b~\cite{Beau2026q5b} gives a co-metric of rank three,
-      $\mathrm{diag}(-A_\tau, A_H, A_H, 0)$, with no coefficient values.
+      $\mathrm{diag}(-A_\tau, A_H, A_H, 0)$, whose temporal term is supplied, with no coefficient
+      values.
       Q11~\cite{Beau2026q11} gives a rank-four form $\mathrm{diag}(-A_\tau, 2\lambda, 2\lambda,
       2\lambda)$ only for a supplied full-rank extension under the hypotheses of its
       Corollary~6.1, with $A_\tau$ and $\lambda$ independent; it is proportional to $\eta$ only
@@ -307,8 +308,8 @@ open here is not one of their inputs.
       It does not determine the full gauge group, and it does not use O31: it treats $\SU(3)$ as
       a structural hypothesis whose identification is open.
       Its $\UU(1)$ is the group of global phase rotations $\omega \mapsto e^{i\theta}\omega$ of the
-      complex fibre, which act in the kernel of $\Pi_n$ by the phase invariance of the capacity
-      profiles.
+      complex fibre, which preserve $\Pi_n$ because the phase lies in its kernel, by the phase
+      invariance of the capacity profiles.
       Conditionally on two continuum hypotheses that it does not prove, Q6a obtains the gauge
       connection as the infinitesimal generator of fibre transport.
 
@@ -361,9 +362,9 @@ open here is not one of their inputs.
       it is not load-bearing for anything asserted below.
 
       \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the gauge group of the
-      admissible fibre, taking it as the structure group of the non-abelian fibre sector
-      corresponding to the spin-$\tfrac{1}{2}$ module, with the associated connection as the
-      admissible gauge field.
+      admissible fibre, reading it as the non-abelian fibre symmetry of the spin-$\tfrac{1}{2}$
+      module; its connection is the generator of fibre transport, under the same two continuum
+      hypotheses as in §\ref{sec:charges}.
       That construction presupposes the sector rather than closing it, so it inherits the
       conditionality of the supplied carrier.
 
@@ -450,7 +451,7 @@ open here is not one of their inputs.
       \label{sec:ym-boundary}
 
       The gauge structure sub-programme concerns the identification of $\Gpi$, which it does not
-      achieve, and constructs the admissible principal bundle over an open structure group.
+      achieve, and records the admissible principal bundle of a supplied compact structure group.
       It does not derive the Yang--Mills equations either.
       That derivation belongs to the gauge--gravity spectral stratification sub-programme
       (Presentation Note~8), where the vertical variation of the joint spectral entropy
@@ -466,7 +467,7 @@ open here is not one of their inputs.
       for every such group; the group enters only through the fibre representation and its Dynkin
       index.
       It therefore does not depend on the identification that this sub-programme leaves open, and
-      Q12 asserts nothing about a colour sector.
+      no result of Q12 depends on a colour sector.
 
       \begin{table}[ht]
         \centering
@@ -481,7 +482,7 @@ open here is not one of their inputs.
           \midrule
           $\UU(1)$ fibre & Foundation, TopInv & Charge $= w \cdot e$, on imported inputs & S \\
           Monopole exclusion & TopInv & $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model & P \\
-          $\UU(1)$ phase & Q6a & Global phase rotations in $\ker \Pi_n$ & S \\
+          $\UU(1)$ phase & Q6a & Global phase rotations preserving $\Pi_n$ & S \\
           $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
           Charges & Q6a, TopInv & Fibre-invariant charges & S \\
           Bundle & Q12, Q6a & Supplied compact $\Gpi$; transport & S, C \\
@@ -516,8 +517,10 @@ open here is not one of their inputs.
       supplied selection rules, their derivation from admissibility being open.
 
       \item \textbf{Effective geometry.}
-      From Note~2 (Q5b--Q11): the effective base manifold $M = \mathbb{R}_\tau \times
-      \Heis_3(\mathbb{R})$ is the space over which the principal bundle is defined.
+      From Note~2 (Q5b--Q11): the effective base manifold $\mathbb{R}_\tau \times
+      \Heis_3(\mathbb{R})$.
+      Q12 defines the principal bundle over a Riemannian four-manifold $M$ with a supplied metric,
+      and reading $M$ as this emergent base is conditional.
     \end{enumerate}
 
   \section{Outputs to Downstream Branches}
@@ -537,10 +540,10 @@ open here is not one of their inputs.
         \midrule
         $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & --- & W (withdrawn, O31) \\
         Charge/mass/inertia as saturated responses & SMchargemass~\cite{Beau2026e} & S \\
-        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q12, Q13 & S, for a supplied compact $\Gpi$ \\
+        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q13, Q14 & S, for a supplied compact $\Gpi$ \\
         Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & --- & S (imported inputs) \\
         Absence of magnetic monopoles & --- & P (canonical) \\
-        $\su(2)$ sector under a supplied carrier & Q14 & C \\
+        $\su(2)$ sector under a supplied carrier & --- & C \\
         $\SU(3)$ colour sector & --- & W (withdrawn, O31) \\
         Projective chirality & --- & S \\
         \bottomrule
@@ -587,8 +590,8 @@ open here is not one of their inputs.
         transport, for the involution's descent.  The vector lift into $V_\rho$ is open.
 
         \item \textit{$\SU(2)$ gauge sector} (Q6a~\cite{Beau2026q6a}):
-        the $\SU(2)$ factor is taken as the structure group of the non-abelian fibre sector, with
-        the admissible gauge field as the associated connection.
+        the $\SU(2)$ factor is read as the non-abelian fibre symmetry, with the admissible gauge
+        field as the generator of fibre transport under Q6a's two continuum hypotheses.
         The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
@@ -605,15 +608,15 @@ open here is not one of their inputs.
         the monopole results below.
 
         \item \textit{$\UU(1)$ as phase symmetry} (Foundation, Q6a):
-        the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which act
-        in the kernel of $\Pi_n$ (Q6a); Foundation~M supplies the identification of that fibre
+        the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which
+        preserve $\Pi_n$ because the phase lies in its kernel (Q6a); Foundation~M supplies the identification of that fibre
         with the Weil representation $V_\rho$.
         The identification is structural, not a separate postulate.
 
         \item \textit{Gauge charges as fibre invariants} (Q6a): a gauge charge is a functional
         constant on the projection fibres; the connection and its curvature $F_{\mu\nu}$ are
-        obtained only under Q6a's two continuum hypotheses, for a structure group that is not
-        established.
+        obtained only under Q6a's two continuum hypotheses, for a supplied compact structure group
+        whose identification is open.
 
         \item \textit{Projective chirality and parity} (TopologicalInvariants, §6):
         parity violation arises from the orientation dependence of admissibility under $\Pi$;

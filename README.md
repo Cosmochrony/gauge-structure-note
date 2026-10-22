@@ -100,7 +100,7 @@ Model group.
 |---|---|---|---|
 | $\mathrm{U}(1)$ fibre | Foundation, TopInv | Charge $= w \cdot e$, on imported inputs | S |
 | Monopole exclusion | TopInv | $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model | P |
-| $\mathrm{U}(1)$ phase | Q6a | Global phase rotations in $\ker \Pi_n$ | S |
+| $\mathrm{U}(1)$ phase | Q6a | Global phase rotations preserving $\Pi_n$ | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
 | Charges | Q6a, TopInv | Fibre-invariant charges | S |
 | Bundle | Q12, Q6a | Supplied compact $G_\Pi$; transport | S, C |
