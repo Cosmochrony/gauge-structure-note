@@ -58,7 +58,7 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026\\[2pt]\small Version 2.1}
+\date{2026\\[2pt]\small Version 2.2}
 
 \begin{document}
 
@@ -234,9 +234,9 @@ open here is not one of their inputs.
       Two premises here are structural inputs and not results.
       The identification of the fibre with $S^3$ is imported from the white paper and carried by
       TopologicalInvariants~\cite{Beau2026k} without proof; the note's own §\ref{sec:inputs}
-      identifies the same fibre with the Weil representation $V_\rho$ after Foundation~M, and the
-      two identifications are reconciled only through the supplied carrier $V_\rho \cong
-      \mathbb{C}^2$, whose unit sphere is $S^3$.
+      works on the complex fibre of a supplied Heisenberg carrier, which Foundation~M does not
+      select, and the two identifications are reconciled only through the supplied carrier
+      $V_\rho \cong \mathbb{C}^2$, whose unit sphere is $S^3$.
       And the identification of the $S^1$ phase with \emph{electric charge} is likewise taken as
       structural input there, not re-derived.
       What TopologicalInvariants Proposition~3.1 then gives, on those inputs, is
@@ -281,9 +281,11 @@ open here is not one of their inputs.
 
       The $\UU(1)$ factor arises from the topological structure of the projection fibre.
 
-      \textbf{Foundation~M}~\cite{Beau2026m} establishes that the projection fibre
-      $\Pi^{-1}(O_n)$ is identified with the Weil representation $V_\rho$ of
-      $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, carrying a canonical symplectic (hence phase) structure.
+      \textbf{Foundation~M}~\cite{Beau2026m} does not identify the projection fibre
+      $\Pi^{-1}(O_n)$ with a Heisenberg or Weil carrier: its Theorem~5.7 shows that the carrier
+      contract extracted from its axioms does not select $\Heis_3(\mathbb{Z}/q\mathbb{Z})$.
+      The spectral programme supplies that carrier, and the phase degree of freedom used below is
+      the phase of its complex fibre.
 
       \textbf{TopologicalInvariants}~\cite{Beau2026k} classifies the admissible homotopy
       invariants of the projection fibre.
@@ -308,8 +310,8 @@ open here is not one of their inputs.
       It does not determine the full gauge group, and it does not use O31: it treats $\SU(3)$ as
       a structural hypothesis whose identification is open.
       Its $\UU(1)$ is the group of global phase rotations $\omega \mapsto e^{i\theta}\omega$ of the
-      complex fibre, which preserve $\Pi_n$ because the phase lies in its kernel, by the phase
-      invariance of the capacity profiles.
+      complex fibre; they act as a global scalar, which leaves every span-based capacity profile
+      unchanged, so the global phase is not resolved by those observables.
       Conditionally on two continuum hypotheses that it does not prove, Q6a obtains the gauge
       connection as the infinitesimal generator of fibre transport.
 
@@ -362,9 +364,11 @@ open here is not one of their inputs.
       it is not load-bearing for anything asserted below.
 
       \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the gauge group of the
-      admissible fibre, reading it as the non-abelian fibre symmetry of the spin-$\tfrac{1}{2}$
-      module; its connection is the generator of fibre transport, under the same two continuum
-      hypotheses as in §\ref{sec:charges}.
+      admissible fibre: on the spinor carrier supplied by O23, and under the neutral-sector
+      hypothesis of O27, the group acting faithfully on the carrier is $\SU(2)$ (its
+      Proposition~2.5), a consistency statement rather than a selection; its connection is the
+      generator of fibre transport, under the same two continuum hypotheses as in
+      §\ref{sec:charges}.
       That construction presupposes the sector rather than closing it, so it inherits the
       conditionality of the supplied carrier.
 
@@ -385,8 +389,9 @@ open here is not one of their inputs.
       Under them it obtains the connection as the generator of fibre transport and the field
       strength as its curvature.
       Q6a supplies no decomposition of the fibre into orbit sectors.
-      The non-trivial holonomy of non-injective admissible projections is a statement of the white
-      paper, of which Q6a gives the local infinitesimal version.
+      The white paper shows that injective admissible projections carry trivial holonomy; Q6a's
+      fibre transport is the local infinitesimal counterpart of that setting and establishes no
+      non-trivial holonomy for a given projection.
 
       \textbf{Q12}~\cite{Beau2026q12} defines the admissible principal $\Gpi$-bundle for a supplied
       compact Lie group $\Gpi$ and extends $A_g$ to the Laplace-type operator $A_{g,A}$ on the
@@ -497,11 +502,10 @@ open here is not one of their inputs.
     \label{sec:inputs}
 
     \begin{enumerate}
-      \item \textbf{Weil representation and fibre structure.}
-      The identification $\Pi^{-1}(O_n) \cong V_\rho$ is a theorem of
-      Foundation~M~\cite{Beau2026m}.
-      The canonical symplectic structure of $V_\rho$ is the origin of the phase degree of
-      freedom.
+      \item \textbf{Supplied carrier and fibre structure.}
+      The identification of $\Pi^{-1}(O_n)$ with a Heisenberg carrier is supplied, not a theorem:
+      Foundation~M~\cite{Beau2026m} shows that its axioms do not select it (its Theorem~5.7).
+      On that supplied carrier, the phase degree of freedom is the phase of the complex fibre.
 
       \item \textbf{Non-injectivity as structural necessity.}
       ENI~\cite{Beau2026l} establishes that non-injectivity is not an interpretive option:
@@ -590,8 +594,9 @@ open here is not one of their inputs.
         transport, for the involution's descent.  The vector lift into $V_\rho$ is open.
 
         \item \textit{$\SU(2)$ gauge sector} (Q6a~\cite{Beau2026q6a}):
-        the $\SU(2)$ factor is read as the non-abelian fibre symmetry, with the admissible gauge
-        field as the generator of fibre transport under Q6a's two continuum hypotheses.
+        the $\SU(2)$ factor is read off the supplied spinor carrier (Q6a Proposition~2.5), with the
+        admissible gauge field as the generator of fibre transport under Q6a's two continuum
+        hypotheses.
         The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
@@ -609,9 +614,8 @@ open here is not one of their inputs.
 
         \item \textit{$\UU(1)$ as phase symmetry} (Foundation, Q6a):
         the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which
-        preserve $\Pi_n$ because the phase lies in its kernel (Q6a); Foundation~M supplies the identification of that fibre
-        with the Weil representation $V_\rho$.
-        The identification is structural, not a separate postulate.
+        leave every span-based capacity profile unchanged (Q6a); the fibre is that of a supplied
+        Heisenberg carrier, which Foundation~M does not select.
 
         \item \textit{Gauge charges as fibre invariants} (Q6a): a gauge charge is a functional
         constant on the projection fibres; the connection and its curvature $F_{\mu\nu}$ are

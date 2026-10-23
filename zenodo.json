@@ -4,5 +4,6 @@
   "publication_type": "workingpaper",
   "main_tex": "tex/GaugeStructureNote.tex",
   "zenodo_id": 20435029,
-  "doi": "10.5281/zenodo.20435029"
+  "doi": "10.5281/zenodo.20435029",
+  "notes": "Version 2.2 aligns the note with Q6a 2.3 and the Foundation paper: the projection fibre is that of a supplied Heisenberg carrier, which the Foundation axioms do not select (Foundation Theorem 5.7); Q6a reads SU(2) off the supplied spinor carrier as a consistency statement, not a selection; the global U(1) phase leaves span-based capacity profiles unchanged; and the white paper's holonomy statement is the injective-trivial direction, not a generic non-trivial holonomy."
 }
