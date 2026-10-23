@@ -81,7 +81,7 @@ structure) and Branch II (spectral admissibility). It takes from Presentation No
 (a supplied input), the threshold $\Sigma_c(n_3) = 3$ (a supplied selection rule, O23), and
 $\operatorname{Im}\mathbb{H} \cong \mathfrak{su}(2)$. It takes no $\mathrm{SU}(3)$ input.
 It takes from Presentation Note 2 (emergent geometry) the effective projection space
-$H_{\mathrm{eff}} = \mathrm{Sym}^2(V_\rho)$ and the effective base manifold
+$H_{\mathrm{eff}}$, identified with $\mathrm{Sym}^2(V_\rho)$ by a supplied hypothesis, and the effective base manifold
 $\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$, with no metric coefficient: Q5b gives,
 under the unestablished [H-L] and the open [H-lift], a rank-three co-metric with no coefficient
 values, and Q11 a rank-four form only for a supplied extension with independent temporal and
@@ -98,9 +98,9 @@ Model group.
 
 | Sector | Papers | Central output | Status |
 |---|---|---|---|
-| $\mathrm{U}(1)$ fibre | Foundation, TopInv | Charge $= w \cdot e$, on imported inputs | S |
+| $\mathrm{U}(1)$ fibre | TopInv | Charge $= w \cdot e$, on imported inputs | S |
 | Monopole exclusion | TopInv | $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model | P |
-| $\mathrm{U}(1)$ phase | Q6a | Global phase rotations preserving $\Pi_n$ | S |
+| $\mathrm{U}(1)$ phase | Q6a | Global phase rotations, unresolved by span-based observables | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
 | Charges | Q6a, TopInv | Fibre-invariant charges | S |
 | Bundle | Q12, Q6a | Supplied compact $G_\Pi$; transport | S, C |
