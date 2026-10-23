@@ -81,11 +81,18 @@ structure) and Branch II (spectral admissibility). It takes from Presentation No
 (a supplied input), the threshold $\Sigma_c(n_3) = 3$ (a supplied selection rule, O23), and
 $\operatorname{Im}\mathbb{H} \cong \mathfrak{su}(2)$. It takes no $\mathrm{SU}(3)$ input.
 It takes from Presentation Note 2 (emergent geometry) the effective projection space
-$H_{\mathrm{eff}} = \mathrm{Sym}^2(V_\rho)$, the effective base manifold
-$\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$, and the admissible principal bundle
-$P_{G_\Pi}(M, G_\Pi)$.
+$H_{\mathrm{eff}} = \mathrm{Sym}^2(V_\rho)$ and the effective base manifold
+$\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$, with no metric coefficient: Q5b gives,
+under the unestablished [H-L] and the open [H-lift], a rank-three co-metric with no coefficient
+values, and Q11 a rank-four form only for a supplied extension with independent temporal and
+spatial scales. The closure $g^{\mu\nu} = 2\eta^{\mu\nu}$ is not established. The admissible
+principal bundle $P_{G_\Pi}(M, G_\Pi)$ is defined in Q12 for a supplied compact $G_\Pi$; Q6a reads
+the connection as the generator of fibre transport, conditionally on two continuum hypotheses.
 
-Downstream, Q12, Q13, Q14 and Note 8 take $G_\Pi$ as a derived input. They inherit this gap.
+Downstream, Q12, Q13 and Note 8 carry $G_\Pi$ as a supplied compact group, and their results hold
+for every such group; Q14 carries its colour module as an explicit hypothesis. None of them takes
+$G_\Pi$ as a derived input, so their results concern a supplied group, not an identified Standard
+Model group.
 
 ## Constituent Papers
 
@@ -93,9 +100,10 @@ Downstream, Q12, Q13, Q14 and Note 8 take $G_\Pi$ as a derived input. They inher
 |---|---|---|---|
 | $\mathrm{U}(1)$ fibre | Foundation, TopInv | Charge $= w \cdot e$, on imported inputs | S |
 | Monopole exclusion | TopInv | $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model | P |
-| $\mathrm{U}(1)$ bundle | Q6a, Q12 | Admissible $\mathrm{U}(1)$ connection | S |
+| $\mathrm{U}(1)$ phase | Q6a | Global phase rotations preserving $\Pi_n$ | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
-| Charges | Q6a, TopInv, Q12 | Bundle structure; holonomy charges | S |
+| Charges | Q6a, TopInv | Fibre-invariant charges | S |
+| Bundle | Q12, Q6a | Supplied compact $G_\Pi$; transport | S, C |
 | $\mathrm{SU}(3)$, either graph | O31 | Triplet co-admissibility route | W |
 | Triplet variance ratios | O32 | $R_{\mathrm{var}}$ at the noise floor | N |
 | $G_\Pi$ as a composite | O31 | Direct-product structure | W |

@@ -58,7 +58,7 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026\\[2pt]\small Version 2.0}
+\date{2026\\[2pt]\small Version 2.1}
 
 \begin{document}
 
@@ -130,8 +130,9 @@
     projection is unaffected, since it is a reading of what gauge freedom \emph{is} and not a
     derivation of which group appears.
     What is not available is the group.
-    Statements elsewhere in the programme that take $\Gpi$ as a derived input, in particular the
-    spectral-entropy route to gauge dynamics (Q12, Q13), inherit that gap.
+    The spectral-entropy route to gauge dynamics (Q12~\cite{Beau2026q12},
+    Q13~\cite{Beau2026q13}) does not take $\Gpi$ as a derived input: it carries $\Gpi$ as a
+    supplied compact Lie group, and its results hold for every such group.
 
     \medskip
     This note is concerned exclusively with the \emph{identification} of the gauge group
@@ -168,10 +169,21 @@
     \begin{itemize}
       \item Effective projection space $H_{\mathrm{eff}} = \Sym^2(V_\rho)$
       (Q7~\cite{Beau2026q7}).
-      \item Effective base manifold $\mathbb{R}_\tau \times \Heis_3(\mathbb{R})$ with
-      metric $g^{\mu\nu} = 2\eta^{\mu\nu}$ (Q5b--Q11).
-      \item Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ with structure group $\Gpi$
-      (Q6a~\cite{Beau2026q6a}, Q12~\cite{Beau2026q12}).
+      \item Effective base manifold $\mathbb{R}_\tau \times \Heis_3(\mathbb{R})$ (Q5b--Q11),
+      with no metric coefficient supplied.
+      Under the unestablished spatial-limit hypothesis [H-L] and the open lifting hypothesis
+      [H-lift], Q5b~\cite{Beau2026q5b} gives a co-metric of rank three,
+      $\mathrm{diag}(-A_\tau, A_H, A_H, 0)$, whose temporal term is supplied, with no coefficient
+      values.
+      Q11~\cite{Beau2026q11} gives a rank-four form $\mathrm{diag}(-A_\tau, 2\lambda, 2\lambda,
+      2\lambda)$ only for a supplied full-rank extension under the hypotheses of its
+      Corollary~6.1, with $A_\tau$ and $\lambda$ independent; it is proportional to $\eta$ only
+      after a rescaling of $\tau$ (Note~2~\cite{Beau2026egnote}).
+      The closure $g^{\mu\nu} = 2\eta^{\mu\nu}$ is not established, and nothing in this note uses
+      a metric coefficient.
+      \item Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ for a supplied compact structure
+      group $\Gpi$ (Q12~\cite{Beau2026q12}), with the connection read as the generator of fibre
+      transport, conditionally on two continuum hypotheses (Q6a~\cite{Beau2026q6a}).
     \end{itemize}
 
     \begin{remark}[Vocabulary note]
@@ -184,8 +196,9 @@ not from a dynamics of $\chi$.
     \begin{remark}[Scope: gauge group identification only]
 This sub-programme concerns the identification of $\Gpi$, which it does not achieve.
 It does not derive the Yang--Mills equations or the gauge--gravity coupling ratio either; those
-belong to Note~8 (Gauge--Gravity Stratification Sub-Programme), which takes $\Gpi$ as an input and
-therefore inherits the gap recorded here.
+belong to Note~8 (Gauge--Gravity Stratification Sub-Programme), whose results are stated for any
+supplied compact $\Gpi$ and not for an identified Standard Model group, so the identification left
+open here is not one of their inputs.
     \end{remark}
 
   \section{Logical Chain of the Sub-Programme}
@@ -290,16 +303,15 @@ therefore inherits the gap recorded here.
       (iii)~Parity violation is interpreted as projective chirality: an orientation dependence of
       admissibility under $\Pi$, which selects one handedness of winding invariants.
 
-      \textbf{Q6a}~\cite{Beau2026q6a} constructs the gauge charges and the Yang--Mills principal
-      bundle from the fibre structure of $\Pi$.
-      Its derivation of $\Gpi$ relies on the withdrawn O31 material and is not available here.
-      The $\UU(1)$ factor is identified as the phase sector of the Weil representation,
-      arising from the canonical symplectic structure of $V_\rho$ and its metaplectic lift.
-      That standard lift is a different object from the specific ``metaplectic identity as used''
-      that O31 withdraws, which changes the central character while the automorphism it invokes
-      fixes the centre.
-      Q6a constructs the admissible principal bundle $P_{\Gpi}(M, \Gpi)$ with structure group
-      $\Gpi$ and connection $A \in \Omega^1(P, \mathfrak{g}_\Pi)$.
+      \textbf{Q6a}~\cite{Beau2026q6a} defines the gauge group as the group of fibre-preserving
+      transformations of $\Pi_n$.
+      It does not determine the full gauge group, and it does not use O31: it treats $\SU(3)$ as
+      a structural hypothesis whose identification is open.
+      Its $\UU(1)$ is the group of global phase rotations $\omega \mapsto e^{i\theta}\omega$ of the
+      complex fibre, which preserve $\Pi_n$ because the phase lies in its kernel, by the phase
+      invariance of the capacity profiles.
+      Conditionally on two continuum hypotheses that it does not prove, Q6a obtains the gauge
+      connection as the infinitesimal generator of fibre transport.
 
       \textbf{SMchargemass}~\cite{Beau2026e} uses the $\UU(1)$ gauge-structure result as a
       downstream input, not as a constituent of its identification.
@@ -349,10 +361,10 @@ therefore inherits the gap recorded here.
       Its published statement is cited here as published; this note takes no position on it, and
       it is not load-bearing for anything asserted below.
 
-      \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the admissible
-      principal bundle, taking it as the structure group of the non-abelian fibre sector
-      corresponding to the spin-$\tfrac{1}{2}$ module, with the associated connection as the
-      admissible gauge field.
+      \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the gauge group of the
+      admissible fibre, reading it as the non-abelian fibre symmetry of the spin-$\tfrac{1}{2}$
+      module; its connection is the generator of fibre transport, under the same two continuum
+      hypotheses as in §\ref{sec:charges}.
       That construction presupposes the sector rather than closing it, so it inherits the
       conditionality of the supplied carrier.
 
@@ -364,16 +376,24 @@ therefore inherits the gap recorded here.
     \subsection{Gauge charges and admissible bundle structure}
       \label{sec:charges}
 
-      \textbf{Q6a}~\cite{Beau2026q6a} constructs the full admissible principal bundle
-      $P_{\Gpi}(M, \Gpi)$ with fibre structure matching the three admissibility fixed points of
-      orbit sizes 1, 2, and 3.
-      Gauge charges are identified as holonomy invariants of the admissible connection $A$.
-      The derivation is structural and does not require the Yang--Mills equations.
+      \textbf{Q6a}~\cite{Beau2026q6a} defines a gauge charge as a functional constant on the
+      projection fibres of $\Pi_n$, an invariant of the fibre's equivalence classes that $\Pi_n$
+      itself does not resolve.
+      Its bundle-level content is conditional on two hypotheses that it does not prove: that the
+      admissible fibre forms a smooth fibre bundle over an effective manifold, and that this
+      manifold carries a differentiable structure.
+      Under them it obtains the connection as the generator of fibre transport and the field
+      strength as its curvature.
+      Q6a supplies no decomposition of the fibre into orbit sectors.
+      The non-trivial holonomy of non-injective admissible projections is a statement of the white
+      paper, of which Q6a gives the local infinitesimal version.
 
-      \textbf{Q12}~\cite{Beau2026q12} takes $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ as the
-      composite of orbit sub-bundles --- an identification that rests on the withdrawn O31 material
-      and is not available here --- and extends $A_g$ to the Laplace-type operator $A_{g,A}$ on the
+      \textbf{Q12}~\cite{Beau2026q12} defines the admissible principal $\Gpi$-bundle for a supplied
+      compact Lie group $\Gpi$ and extends $A_g$ to the Laplace-type operator $A_{g,A}$ on the
       associated vector bundle.
+      It takes no specific group: its main theorem holds for any compact $\Gpi$, and no result of
+      it depends on which group is supplied, on a decomposition of the bundle into sub-bundles, or
+      on a colour sector.
       Its Lemma~1, titled there \emph{Vertical variation at fixed base metric}, states under
       minimal coupling --- the endomorphism $E$ not depending on the connection $A$ --- that the
       vertical variation at fixed $g$ receives no $a_2$ contribution.
@@ -431,7 +451,7 @@ therefore inherits the gap recorded here.
       \label{sec:ym-boundary}
 
       The gauge structure sub-programme concerns the identification of $\Gpi$, which it does not
-      achieve, and constructs the admissible principal bundle over an open structure group.
+      achieve, and records the admissible principal bundle of a supplied compact structure group.
       It does not derive the Yang--Mills equations either.
       That derivation belongs to the gauge--gravity spectral stratification sub-programme
       (Presentation Note~8), where the vertical variation of the joint spectral entropy
@@ -443,10 +463,11 @@ therefore inherits the gap recorded here.
       Q12 and Q13 become constituent papers of Note~8 in so far as they derive the
       Yang--Mills equations and the gauge--gravity coupling.
 
-      The $a_4$-level result of Q12 (Theorem~1) depends on the gauge group $\Gpi$ as an input
-      from Q6a and the O-series.
-      Since $\Gpi$ is not established, that dependency is now an open input rather than a supplied
-      one, and Q12's $\SU(3)$ sector in particular rests on a withdrawn derivation.
+      The $a_4$-level result of Q12 (Theorem~1) takes $\Gpi$ as a supplied compact group and holds
+      for every such group; the group enters only through the fibre representation and its Dynkin
+      index.
+      It therefore does not depend on the identification that this sub-programme leaves open, and
+      no result of Q12 depends on a colour sector.
 
       \begin{table}[ht]
         \centering
@@ -461,9 +482,10 @@ therefore inherits the gap recorded here.
           \midrule
           $\UU(1)$ fibre & Foundation, TopInv & Charge $= w \cdot e$, on imported inputs & S \\
           Monopole exclusion & TopInv & $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model & P \\
-          $\UU(1)$ bundle & Q6a, Q12 & Admissible $\UU(1)$ connection & S \\
+          $\UU(1)$ phase & Q6a & Global phase rotations preserving $\Pi_n$ & S \\
           $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
-          Charges & Q6a, TopInv, Q12 & Bundle structure; holonomy charges & S \\
+          Charges & Q6a, TopInv & Fibre-invariant charges & S \\
+          Bundle & Q12, Q6a & Supplied compact $\Gpi$; transport & S, C \\
           $\SU(3)$, either graph & O31 & Triplet co-admissibility route & W \\
           Triplet variance ratios & O32 & $R_{\mathrm{var}}$ at the noise floor & N \\
           $\Gpi$ as a composite & O31 & Direct-product structure & W \\
@@ -495,8 +517,10 @@ therefore inherits the gap recorded here.
       supplied selection rules, their derivation from admissibility being open.
 
       \item \textbf{Effective geometry.}
-      From Note~2 (Q5b--Q11): the effective base manifold $M = \mathbb{R}_\tau \times
-      \Heis_3(\mathbb{R})$ is the space over which the principal bundle is defined.
+      From Note~2 (Q5b--Q11): the effective base manifold $\mathbb{R}_\tau \times
+      \Heis_3(\mathbb{R})$.
+      Q12 defines the principal bundle over a Riemannian four-manifold $M$ with a supplied metric,
+      and reading $M$ as this emergent base is conditional.
     \end{enumerate}
 
   \section{Outputs to Downstream Branches}
@@ -504,21 +528,24 @@ therefore inherits the gap recorded here.
 
     \begin{table}[ht]
       \centering
-      \caption{Principal outputs and downstream consumers.}
+      \caption{Principal outputs and downstream consumers.
+      ---: no consuming paper is identified.
+      Q12 and Q13 take $\Gpi$ as a supplied compact group, and Q14~\cite{Beau2026q14} carries
+      its colour module as an explicit hypothesis; none of them consumes a withdrawn output.}
       \label{tab:outputs}
       \renewcommand{\arraystretch}{1.3}
       \begin{tabular}{@{}p{5.5cm}p{4.5cm}l@{}}
         \toprule
         Output & Consumer & Status \\
         \midrule
-        $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & Q12, Q13, Q14 & W (withdrawn, O31) \\
+        $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ & --- & W (withdrawn, O31) \\
         Charge/mass/inertia as saturated responses & SMchargemass~\cite{Beau2026e} & S \\
-        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q12, Q13 & S, on an open $\Gpi$ \\
-        Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & Q14, applications & S (imported inputs) \\
-        Absence of magnetic monopoles & Q14 & P (canonical) \\
-        $\su(2)$ sector under a supplied carrier & Q14, Q12, Q13 & C \\
-        $\SU(3)$ colour sector & Q12, Q13 & W (withdrawn, O31) \\
-        Projective chirality & Q14 & S \\
+        Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q13, Q14 & S, for a supplied compact $\Gpi$ \\
+        Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & --- & S (imported inputs) \\
+        Absence of magnetic monopoles & --- & P (canonical) \\
+        $\su(2)$ sector under a supplied carrier & --- & C \\
+        $\SU(3)$ colour sector & --- & W (withdrawn, O31) \\
+        Projective chirality & --- & S \\
         \bottomrule
       \end{tabular}
     \end{table}
@@ -562,9 +589,9 @@ therefore inherits the gap recorded here.
         admissible-saturation hypothesis, not derived; O27 carries a second hypothesis, parity
         transport, for the involution's descent.  The vector lift into $V_\rho$ is open.
 
-        \item \textit{$\SU(2)$ bundle sector} (Q6a~\cite{Beau2026q6a}):
-        the $\SU(2)$ factor is taken as the structure group of the non-abelian fibre sector, with
-        the admissible gauge field as the associated connection.
+        \item \textit{$\SU(2)$ gauge sector} (Q6a~\cite{Beau2026q6a}):
+        the $\SU(2)$ factor is read as the non-abelian fibre symmetry, with the admissible gauge
+        field as the generator of fibre transport under Q6a's two continuum hypotheses.
         The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
@@ -580,15 +607,16 @@ therefore inherits the gap recorded here.
         Proposition~3.1 does not invoke the canonical admissible model; that restriction belongs to
         the monopole results below.
 
-        \item \textit{$\UU(1)$ as phase fibre} (Foundation, Q6a):
-        the $\UU(1)$ sector is the phase symmetry of the canonical symplectic structure
-        of $V_\rho$.
-        The identification is structural; it follows from the Weil representation and is not a
-        separate postulate.
+        \item \textit{$\UU(1)$ as phase symmetry} (Foundation, Q6a):
+        the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which
+        preserve $\Pi_n$ because the phase lies in its kernel (Q6a); Foundation~M supplies the identification of that fibre
+        with the Weil representation $V_\rho$.
+        The identification is structural, not a separate postulate.
 
-        \item \textit{Gauge charges as holonomy invariants} (Q6a): the admissible connection
-        $A$ and its curvature $F_{\mu\nu}$ encode gauge charges as holonomy classes of the
-        bundle, on a structure group that is not established.
+        \item \textit{Gauge charges as fibre invariants} (Q6a): a gauge charge is a functional
+        constant on the projection fibres; the connection and its curvature $F_{\mu\nu}$ are
+        obtained only under Q6a's two continuum hypotheses, for the gauge group of fibre-preserving
+        transformations, which Q6a does not determine in full.
 
         \item \textit{Projective chirality and parity} (TopologicalInvariants, §6):
         parity violation arises from the orientation dependence of admissibility under $\Pi$;
@@ -701,12 +729,14 @@ therefore inherits the gap recorded here.
     The composite $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is therefore not established, and
     neither are the determinant-one condition, the commutation of the putative factors, nor the
     direct-product structure.
-    Downstream results that take $\Gpi$ as a derived input inherit this gap; the affected
-    statements are in Q12, Q13, Q14 and in the notes that cite this one for the gauge group.
+    Q12 and Q13 carry $\Gpi$ as a supplied compact group and hold for every such group, and Q14
+    carries its colour module as an explicit hypothesis; none of them takes $\Gpi$ as a derived
+    input, so their results are statements about a supplied group, not about an identified
+    Standard Model group.
 
     This note does not derive Yang--Mills dynamics, which belongs to Note~8
     (Gauge--Gravity Stratification).
-    Note~8's gauge-group input is open.
+    Note~8 takes $\Gpi$ as a supplied compact group.
 
     \subsection*{Interpretive outlook}
 
