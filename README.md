@@ -57,8 +57,8 @@ S^1 \hookrightarrow S^3 \to S^2
    canonical admissible model). Two premises there are structural inputs rather than results: the
    identification of the fibre with $S^3$, imported from the white paper, and the identification of
    the $S^1$ phase with electric charge. The sector is
-   argued in the topological layer rather than in O31, so neither withdrawal reaches it — which is a
-   statement about independence from the withdrawals, not about its premises being derived.
+   argued in the topological layer rather than in O31, so the O31 withdrawal notice does not reach it —
+   which is a statement about independence from O31, not about its premises being derived.
 2. **$\mathrm{SU}(2)$, conditional on a supplied carrier** — the admissible sector is
    $V_\rho \cong \mathbb{C}^2$, a supplied input; O23 (Theorem 3.1) proves that its traceless
    sector is $\mathfrak{su}(2) \cong \operatorname{Im}\mathbb{H}$, of real dimension three. O27
