@@ -58,7 +58,7 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026\\[2pt]\small Version 2.1}
+\date{2026\\[2pt]\small Version 2.2}
 
 \begin{document}
 
@@ -70,7 +70,7 @@
     This note records what that question has and has not established.
 
     No derivation of the composite $\Gpi = \SU(3) \times \SU(2) \times \UU(1)$ is available.
-    O31~\cite{Beau2026a35} withdraws every derivation of a gauge factor and of the Standard Model
+    O31 withdraws every derivation of a gauge factor and of the Standard Model
     gauge group as a composite, together with the determinant-one condition, the commutation of the
     putative factors and the direct-product structure.
     The $\SU(3)$ identification is withdrawn with it: the uniqueness of $\SU(3)$ among connected
@@ -84,7 +84,7 @@
     $q_{\mathrm{eff}} = w \cdot e$ from $\pi_1(S^1) \cong \mathbb{Z}$, on two premises carried as
     structural input rather than derived; and on the canonical admissible model no isolated magnetic
     monopole is topologically admissible.
-    $\SU(2)$ is conditional on the spinor carrier supplied by O23~\cite{Beau2026a27}: O27 gives
+    $\SU(2)$ is conditional on the spinor carrier supplied by O23: O27 gives
     unique real-linear factorisation through the admissibility quotient, and the identification of
     that quotient with $\su(2)$ is supplied rather than derived.
 
@@ -152,8 +152,8 @@
     From Note~1 (spectral admissibility):
     \begin{itemize}
       \item Spin-$\tfrac{1}{2}$ admissible sector $V_\rho \cong \mathbb{C}^2$, a supplied
-      carrier (O27--O29~\cite{Beau2026a31,Beau2026a32,Beau2026a33}; its selection from
-      admissibility is open).
+      carrier (O23~\cite{Beau2026a27}, used by O27--O29~\cite{Beau2026a31,Beau2026a32,Beau2026a33};
+      its selection from admissibility is open).
       \item Threshold dimension $\Sigma_c(n_3) = 3$, a supplied selection rule (O23
       Theorem~3.1~\cite{Beau2026a27} proves the three-dimensionality of the neutral sector
       of a supplied spinor carrier; the carrier selection and the identification of
@@ -167,8 +167,8 @@
 
     From Note~2 (emergent geometry):
     \begin{itemize}
-      \item Effective projection space $H_{\mathrm{eff}} = \Sym^2(V_\rho)$
-      (Q7~\cite{Beau2026q7}).
+      \item Effective projection space $H_{\mathrm{eff}}$, identified with $\Sym^2(V_\rho)$ by a
+      supplied hypothesis whose bridge requirements Q7~\cite{Beau2026q7} states.
       \item Effective base manifold $\mathbb{R}_\tau \times \Heis_3(\mathbb{R})$ (Q5b--Q11),
       with no metric coefficient supplied.
       Under the unestablished spatial-limit hypothesis [H-L] and the open lifting hypothesis
@@ -234,16 +234,16 @@ open here is not one of their inputs.
       Two premises here are structural inputs and not results.
       The identification of the fibre with $S^3$ is imported from the white paper and carried by
       TopologicalInvariants~\cite{Beau2026k} without proof; the note's own §\ref{sec:inputs}
-      identifies the same fibre with the Weil representation $V_\rho$ after Foundation~M, and the
-      two identifications are reconciled only through the supplied carrier $V_\rho \cong
-      \mathbb{C}^2$, whose unit sphere is $S^3$.
+      works on the complex fibre of a supplied Heisenberg carrier, which Foundation~M does not
+      select, and the two identifications are reconciled only through the supplied carrier
+      $V_\rho \cong \mathbb{C}^2$, whose unit sphere is $S^3$.
       And the identification of the $S^1$ phase with \emph{electric charge} is likewise taken as
       structural input there, not re-derived.
       What TopologicalInvariants Proposition~3.1 then gives, on those inputs, is
       $q_{\mathrm{eff}} = w \cdot e$.
-      The $\UU(1)$ sector is the one of the three that neither withdrawal reaches, because it is
-      argued in the topological layer and not in O31; that is a statement about its independence
-      from the withdrawals, not a claim that its premises are derived.
+      The $\UU(1)$ sector is argued in the topological layer and not in O31, so the O31 withdrawal
+      notice does not reach it; that is a statement about its independence from O31, not a claim
+      that its premises are derived.
 
       \item \textit{$\su(2)$ under a supplied carrier.}
       If the admissible neutral sector is carried by an irreducible two-dimensional unitary
@@ -281,9 +281,11 @@ open here is not one of their inputs.
 
       The $\UU(1)$ factor arises from the topological structure of the projection fibre.
 
-      \textbf{Foundation~M}~\cite{Beau2026m} establishes that the projection fibre
-      $\Pi^{-1}(O_n)$ is identified with the Weil representation $V_\rho$ of
-      $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, carrying a canonical symplectic (hence phase) structure.
+      \textbf{Foundation~M}~\cite{Beau2026m} does not identify the projection fibre
+      $\Pi^{-1}(O_n)$ with a Heisenberg or Weil carrier: its Theorem~5.7 shows that the carrier
+      contract extracted from its axioms does not select $\Heis_3(\mathbb{Z}/q\mathbb{Z})$.
+      The spectral programme supplies that carrier, and the phase degree of freedom used below is
+      the phase of its complex fibre.
 
       \textbf{TopologicalInvariants}~\cite{Beau2026k} classifies the admissible homotopy
       invariants of the projection fibre.
@@ -308,8 +310,9 @@ open here is not one of their inputs.
       It does not determine the full gauge group, and it does not use O31: it treats $\SU(3)$ as
       a structural hypothesis whose identification is open.
       Its $\UU(1)$ is the group of global phase rotations $\omega \mapsto e^{i\theta}\omega$ of the
-      complex fibre, which preserve $\Pi_n$ because the phase lies in its kernel, by the phase
-      invariance of the capacity profiles.
+      complex fibre; they act as a global scalar, which leaves every span-based capacity profile
+      unchanged, so the global phase is not resolved by those observables, and the rotations belong to
+      the gauge group to the extent that $\Pi_n$ is defined through such observables.
       Conditionally on two continuum hypotheses that it does not prove, Q6a obtains the gauge
       connection as the infinitesimal generator of fibre transport.
 
@@ -323,8 +326,8 @@ open here is not one of their inputs.
     \subsection{Quaternionic admissibility and the \texorpdfstring{$\SU(2)$}{SU(2)} sector}
       \label{sec:su2}
 
-      The $\SU(2)$ factor is treated analytically by the chain O23--O30 and Q6a, conditionally
-      on the supplied spinor carrier.
+      The $\SU(2)$ factor is studied by the chain O23--O30 and Q6a, conditionally on the
+      supplied spinor carrier.
 
       \textbf{O23}~\cite{Beau2026a27} proves that if the admissible neutral sector is carried
       by an irreducible two-dimensional unitary representation $V_\rho \cong \mathbb{C}^2$ (a
@@ -343,35 +346,37 @@ open here is not one of their inputs.
       adjoint to the fundamental, so the vector lift into $V_\rho$ is open.
       This is a factorisation statement, not a rigidity theorem, and it is conditional.
 
-      \textbf{O28}~\cite{Beau2026a32} establishes asymptotic calibration: the covariance
-      $\mathcal{C}_c$ in $\mathrm{End}(H_{\mathrm{eff}})$ has $1\%$ threshold rank 3 for every conjugate
-      pair at $q \in \{61, 101, 151\}$, with invariant eigenvalue structure
-      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
-      This is a measured ratio.
+      \textbf{O28}~\cite{Beau2026a32} reports, in its protocol, $1\%$ threshold rank 3 for the
+      covariance $\mathcal{C}_c$ in $\mathrm{End}(H_{\mathrm{eff}})$ at $q \in \{61, 101, 151\}$, with
+      eigenvalue structure $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
+      These are measured values of that protocol, not invariants.
 
-      \textbf{O29}~\cite{Beau2026a33} reports $r_{\mathrm{eff}} = 3$ for
-      $q \in \{61, 101, 151\}$ and, in its published statement, identifies the carrier
-      $H_{\mathrm{eff}} \cong \Sym^2(V_\rho)$.
-      That statement is cited here as published; this note takes no position on it.
+      \textbf{O29}~\cite{Beau2026a33} audits that finite-data result: rank three is modal but not
+      invariant ($32/50$ stored samples at $q=101$, $103/105$ at $q=211$).
+      It separates the measured span in $H_{\mathrm{eff}}$, its data-dependent truncation, and the
+      supplied spin-$\tfrac{1}{2}$ module $V_\rho$, and identifies none of them with another.
       The doublet dimension $d_\rho = 2$ is a minimality selection of O26 throughout this note, not
       a measurement.
 
-      \textbf{O30}~\cite{Beau2026a34} gives an analytical account of the ratio
-      $\lambda_1/\lambda_2 = 2$ from a Born--Infeld parity constraint on the admissible fibre.
-      Its published statement is cited here as published; this note takes no position on it, and
-      it is not load-bearing for anything asserted below.
+      \textbf{O30}~\cite{Beau2026a34} studies a conditional $3\times3$ covariance model on
+      $\Sym^2(V_\rho)$ under explicit Veronese-cone, inter-block and parity assumptions; it is not the
+      $9\times9$ covariance measured in O28 and supplies no analytical account of the O28 ratio.
+      It is not load-bearing for anything asserted below.
 
       \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the gauge group of the
-      admissible fibre, reading it as the non-abelian fibre symmetry of the spin-$\tfrac{1}{2}$
-      module; its connection is the generator of fibre transport, under the same two continuum
-      hypotheses as in §\ref{sec:charges}.
+      admissible fibre: on the spinor carrier supplied by O23, and under the neutral-sector
+      hypothesis of O27, the group acting faithfully on the carrier is $\SU(2)$ (its
+      Proposition~2.5), a consistency statement rather than a selection; its connection is the
+      generator of fibre transport, under the same two continuum hypotheses as in
+      §\ref{sec:charges}.
       That construction presupposes the sector rather than closing it, so it inherits the
       conditionality of the supplied carrier.
 
-      \textbf{Q7}~\cite{Beau2026q7} establishes that the three-dimensional internal space
-      $H_{\mathrm{eff}} = \Sym^2(V_\rho)$ carries the unique irreducible $\su(2)$-module of
-      dimension 3, confirming that the spatial and internal $\su(2)$ structures are
-      representation-theoretically locked.
+      \textbf{Q7}~\cite{Beau2026q7} states what an equivariant bridge between the spatial and internal
+      structures would require: under the hypothesis identifying the measured space with a spin-1
+      module, $\Sym^2(V_\rho)$ is the unique irreducible three-dimensional $\su(2)$-module, so a
+      non-zero equivariant bridge is an isomorphism.
+      That identification is supplied, not derived.
 
     \subsection{Gauge charges and admissible bundle structure}
       \label{sec:charges}
@@ -385,8 +390,9 @@ open here is not one of their inputs.
       Under them it obtains the connection as the generator of fibre transport and the field
       strength as its curvature.
       Q6a supplies no decomposition of the fibre into orbit sectors.
-      The non-trivial holonomy of non-injective admissible projections is a statement of the white
-      paper, of which Q6a gives the local infinitesimal version.
+      The white paper shows that injective admissible projections carry trivial holonomy; Q6a's
+      fibre transport is the local infinitesimal counterpart of that setting and establishes no
+      non-trivial holonomy for a given projection.
 
       \textbf{Q12}~\cite{Beau2026q12} defines the admissible principal $\Gpi$-bundle for a supplied
       compact Lie group $\Gpi$ and extends $A_g$ to the Laplace-type operator $A_{g,A}$ on the
@@ -480,9 +486,9 @@ open here is not one of their inputs.
           \toprule
           Sector & Papers & Central output & Status \\
           \midrule
-          $\UU(1)$ fibre & Foundation, TopInv & Charge $= w \cdot e$, on imported inputs & S \\
+          $\UU(1)$ fibre & TopInv & Charge $= w \cdot e$, on imported inputs & S \\
           Monopole exclusion & TopInv & $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model & P \\
-          $\UU(1)$ phase & Q6a & Global phase rotations preserving $\Pi_n$ & S \\
+          $\UU(1)$ phase & Q6a & Global phase rotations, unresolved by span-based observables & S \\
           $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
           Charges & Q6a, TopInv & Fibre-invariant charges & S \\
           Bundle & Q12, Q6a & Supplied compact $\Gpi$; transport & S, C \\
@@ -497,11 +503,10 @@ open here is not one of their inputs.
     \label{sec:inputs}
 
     \begin{enumerate}
-      \item \textbf{Weil representation and fibre structure.}
-      The identification $\Pi^{-1}(O_n) \cong V_\rho$ is a theorem of
-      Foundation~M~\cite{Beau2026m}.
-      The canonical symplectic structure of $V_\rho$ is the origin of the phase degree of
-      freedom.
+      \item \textbf{Supplied carrier and fibre structure.}
+      The identification of $\Pi^{-1}(O_n)$ with a Heisenberg carrier is supplied, not a theorem:
+      Foundation~M~\cite{Beau2026m} shows that its axioms do not select it (its Theorem~5.7).
+      On that supplied carrier, the phase degree of freedom is the phase of the complex fibre.
 
       \item \textbf{Non-injectivity as structural necessity.}
       ENI~\cite{Beau2026l} establishes that non-injectivity is not an interpretive option:
@@ -590,8 +595,10 @@ open here is not one of their inputs.
         transport, for the involution's descent.  The vector lift into $V_\rho$ is open.
 
         \item \textit{$\SU(2)$ gauge sector} (Q6a~\cite{Beau2026q6a}):
-        the $\SU(2)$ factor is read as the non-abelian fibre symmetry, with the admissible gauge
-        field as the generator of fibre transport under Q6a's two continuum hypotheses.
+        the $\SU(2)$ factor is read off the supplied spinor carrier, under O27's neutral-sector
+        hypothesis (Q6a Proposition~2.5), with the
+        admissible gauge field as the generator of fibre transport under Q6a's two continuum
+        hypotheses.
         The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
@@ -609,9 +616,8 @@ open here is not one of their inputs.
 
         \item \textit{$\UU(1)$ as phase symmetry} (Foundation, Q6a):
         the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which
-        preserve $\Pi_n$ because the phase lies in its kernel (Q6a); Foundation~M supplies the identification of that fibre
-        with the Weil representation $V_\rho$.
-        The identification is structural, not a separate postulate.
+        leave every span-based capacity profile unchanged (Q6a); the fibre is that of a supplied
+        Heisenberg carrier, which Foundation~M does not select.
 
         \item \textit{Gauge charges as fibre invariants} (Q6a): a gauge charge is a functional
         constant on the projection fibres; the connection and its curvature $F_{\mu\nu}$ are
@@ -629,8 +635,8 @@ open here is not one of their inputs.
 
       \begin{enumerate}
         \item \textit{$1\%$ threshold rank 3} (O28--O29):
-        measured at $q \in \{61, 101, 151\}$ with zero inter-pair variance for
-        $q \in \{61, 151\}$.
+        measured at $q \in \{61, 101, 151\}$ in O28's protocol; in O29's extended recomputation rank
+        three is modal, not invariant.
         The doublet dimension $d_\rho = 2$ is a minimality selection of O26 (§\ref{sec:inputs}),
         not a measurement.
 
