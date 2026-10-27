@@ -58,7 +58,7 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026\\[2pt]\small Version 2.2}
+\date{2026\\[2pt]\small Version 2.3}
 
 \begin{document}
 
@@ -182,8 +182,9 @@
       The closure $g^{\mu\nu} = 2\eta^{\mu\nu}$ is not established, and nothing in this note uses
       a metric coefficient.
       \item Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ for a supplied compact structure
-      group $\Gpi$ (Q12~\cite{Beau2026q12}), with the connection read as the generator of fibre
-      transport, conditionally on two continuum hypotheses (Q6a~\cite{Beau2026q6a}).
+      group $\Gpi$ (Q12~\cite{Beau2026q12}), with a supplied connection read as the generator of
+      parallel transport, under two continuum hypotheses that do not determine it
+      (Q6a~\cite{Beau2026q6a}).
     \end{itemize}
 
     \begin{remark}[Vocabulary note]
@@ -313,8 +314,9 @@ open here is not one of their inputs.
       complex fibre; they act as a global scalar, which leaves every span-based capacity profile
       unchanged, so the global phase is not resolved by those observables, and the rotations belong to
       the gauge group to the extent that $\Pi_n$ is defined through such observables.
-      Conditionally on two continuum hypotheses that it does not prove, Q6a obtains the gauge
-      connection as the infinitesimal generator of fibre transport.
+      Q6a states two continuum hypotheses that it does not prove and shows that they do not determine
+      a connection; on a supplied structure group, representation and connection, the gauge connection
+      is the infinitesimal generator of parallel transport.
 
       \textbf{SMchargemass}~\cite{Beau2026e} uses the $\UU(1)$ gauge-structure result as a
       downstream input, not as a constituent of its identification.
@@ -366,9 +368,9 @@ open here is not one of their inputs.
       \textbf{Q6a}~\cite{Beau2026q6a} treats the $\SU(2)$ sector at the level of the gauge group of the
       admissible fibre: on the spinor carrier supplied by O23, and under the neutral-sector
       hypothesis of O27, the group acting faithfully on the carrier is $\SU(2)$ (its
-      Proposition~2.5), a consistency statement rather than a selection; its connection is the
-      generator of fibre transport, under the same two continuum hypotheses as in
-      §\ref{sec:charges}.
+      Proposition~2.5), a consistency statement rather than a selection; its connection is supplied,
+      and it generates parallel transport on supplied data under the same two continuum hypotheses as
+      in §\ref{sec:charges}, which do not determine it.
       That construction presupposes the sector rather than closing it, so it inherits the
       conditionality of the supplied carrier.
 
@@ -382,16 +384,18 @@ open here is not one of their inputs.
       \label{sec:charges}
 
       \textbf{Q6a}~\cite{Beau2026q6a} defines a gauge charge as a functional constant on the
-      projection fibres of $\Pi_n$, an invariant of the fibre's equivalence classes that $\Pi_n$
-      itself does not resolve.
+      projection fibres of $\Pi_n$.
+      Such a functional factors through $\Pi_n$, so it is a function of the observable state, and its
+      identification with a conserved physical charge is open in Q6a.
       Its bundle-level content is conditional on two hypotheses that it does not prove: that the
       admissible fibre forms a smooth fibre bundle over an effective manifold, and that this
       manifold carries a differentiable structure.
-      Under them it obtains the connection as the generator of fibre transport and the field
-      strength as its curvature.
+      These hypotheses do not determine a connection, so Q6a supplies a structure group, its
+      representation and a connection; on these data the connection generates parallel transport, and
+      the field strength is its curvature, which measures the path dependence of transport.
       Q6a supplies no decomposition of the fibre into orbit sectors.
       The white paper shows that injective admissible projections carry trivial holonomy; Q6a's
-      fibre transport is the local infinitesimal counterpart of that setting and establishes no
+      supplied transport is the local infinitesimal counterpart of that setting and establishes no
       non-trivial holonomy for a given projection.
 
       \textbf{Q12}~\cite{Beau2026q12} defines the admissible principal $\Gpi$-bundle for a supplied
@@ -491,7 +495,7 @@ open here is not one of their inputs.
           $\UU(1)$ phase & Q6a & Global phase rotations, unresolved by span-based observables & S \\
           $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
           Charges & Q6a, TopInv & Fibre-invariant charges & S \\
-          Bundle & Q12, Q6a & Supplied compact $\Gpi$; transport & S, C \\
+          Bundle & Q12, Q6a & Supplied compact $\Gpi$ and connection & S, C \\
           $\SU(3)$, either graph & O31 & Triplet co-admissibility route & W \\
           Triplet variance ratios & O32 & $R_{\mathrm{var}}$ at the noise floor & N \\
           $\Gpi$ as a composite & O31 & Direct-product structure & W \\
@@ -597,8 +601,8 @@ open here is not one of their inputs.
         \item \textit{$\SU(2)$ gauge sector} (Q6a~\cite{Beau2026q6a}):
         the $\SU(2)$ factor is read off the supplied spinor carrier, under O27's neutral-sector
         hypothesis (Q6a Proposition~2.5), with the
-        admissible gauge field as the generator of fibre transport under Q6a's two continuum
-        hypotheses.
+        gauge field a supplied connection, the generator of parallel transport under Q6a's two
+        continuum hypotheses, which do not determine it.
         The construction presupposes the sector and inherits the carrier's conditionality.
       \end{enumerate}
 
@@ -620,9 +624,11 @@ open here is not one of their inputs.
         Heisenberg carrier, which Foundation~M does not select.
 
         \item \textit{Gauge charges as fibre invariants} (Q6a): a gauge charge is a functional
-        constant on the projection fibres; the connection and its curvature $F_{\mu\nu}$ are
-        obtained only under Q6a's two continuum hypotheses, for the gauge group of fibre-preserving
-        transformations, which Q6a does not determine in full.
+        constant on the projection fibres, hence a function of the observable state, whose
+        identification with a conserved physical charge is open.
+        The connection and its curvature $F_{\mu\nu}$ are defined only on supplied transport data,
+        under Q6a's two continuum hypotheses, which do not determine them; Q6a does not determine in
+        full the gauge group of fibre-preserving transformations.
 
         \item \textit{Projective chirality and parity} (TopologicalInvariants, §6):
         parity violation arises from the orientation dependence of admissibility under $\Pi$;
