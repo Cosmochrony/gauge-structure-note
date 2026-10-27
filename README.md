@@ -86,8 +86,9 @@ $\mathbb{R}_\tau \times \mathrm{Heis}_3(\mathbb{R})$, with no metric coefficient
 under the unestablished [H-L] and the open [H-lift], a rank-three co-metric with no coefficient
 values, and Q11 a rank-four form only for a supplied extension with independent temporal and
 spatial scales. The closure $g^{\mu\nu} = 2\eta^{\mu\nu}$ is not established. The admissible
-principal bundle $P_{G_\Pi}(M, G_\Pi)$ is defined in Q12 for a supplied compact $G_\Pi$; Q6a reads
-the connection as the generator of fibre transport, conditionally on two continuum hypotheses.
+principal bundle $P_{G_\Pi}(M, G_\Pi)$ is defined in Q12 for a supplied compact $G_\Pi$; Q6a's two
+continuum hypotheses do not determine a connection, so the connection is supplied and read as the
+generator of parallel transport on those data.
 
 Downstream, Q12, Q13 and Note 8 carry $G_\Pi$ as a supplied compact group, and their results hold
 for every such group; Q14 carries its colour module as an explicit hypothesis. None of them takes
@@ -103,7 +104,7 @@ Model group.
 | $\mathrm{U}(1)$ phase | Q6a | Global phase rotations, unresolved by span-based observables | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
 | Charges | Q6a, TopInv | Fibre-invariant charges | S |
-| Bundle | Q12, Q6a | Supplied compact $G_\Pi$; transport | S, C |
+| Bundle | Q12, Q6a | Supplied compact $G_\Pi$ and connection | S, C |
 | $\mathrm{SU}(3)$, either graph | O31 | Triplet co-admissibility route | W |
 | Triplet variance ratios | O32 | $R_{\mathrm{var}}$ at the noise floor | N |
 | $G_\Pi$ as a composite | O31 | Direct-product structure | W |
