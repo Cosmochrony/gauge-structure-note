@@ -58,7 +58,7 @@
 \small Independent Researcher\\
 \small \texttt{jerome.beau@cosmochrony.org}}
 
-\date{2026\\[2pt]\small Version 2.3}
+\date{2026\\[2pt]\small Version 2.4}
 
 \begin{document}
 
@@ -82,8 +82,8 @@
     What remains is one structural sector and one conditional sector, not a group.
     $\UU(1)$ is structural: the Hopf phase fibre of $\Pi$ gives charge quantisation
     $q_{\mathrm{eff}} = w \cdot e$ from $\pi_1(S^1) \cong \mathbb{Z}$, on two premises carried as
-    structural input rather than derived; and on the canonical admissible model no isolated magnetic
-    monopole is topologically admissible.
+    structural input rather than derived; the triviality of $\pi_2$ on a chosen domain of the Hopf
+    base does not exclude magnetic monopoles, whose absence is open.
     $\SU(2)$ is conditional on the spinor carrier supplied by O23: O27 gives
     unique real-linear factorisation through the admissibility quotient, and the identification of
     that quotient with $\su(2)$ is supplied rather than derived.
@@ -299,10 +299,11 @@ open here is not one of their inputs.
       That proposition does not invoke the canonical admissible model; its undischarged inputs are
       the identification of the fibre with $S^3$ and the identification of the $S^1$ phase with
       electric charge, both carried as structural input there.
-      (ii)~On the canonical admissible model, the bounded-flux constraint removes the polar
-      regions of the Hopf base $S^2$, reducing the admissible base to an annulus with
-      $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ (Proposition~4.1): no isolated magnetic monopoles
-      are topologically admissible.
+      (ii)~On a chosen domain of the Hopf base $S^2$, with two disjoint discs removed, the base is
+      an annulus with $\pi_2 = 0$ (Proposition~4.1).
+      The domain is chosen, not derived from the capacity axiom, and $\pi_2$ of this internal base
+      is not shown to classify magnetic defects; no exclusion of magnetic monopoles follows
+      (Remark~5.1).
       (iii)~Parity violation is interpreted as projective chirality: an orientation dependence of
       admissibility under $\Pi$, which selects one handedness of winding invariants.
 
@@ -411,8 +412,8 @@ open here is not one of their inputs.
       it is not the stronger independence statement its usual name suggests.
 
       \textbf{TopologicalInvariants}~\cite{Beau2026k} places the charge identification within
-      the topological layer: charge is a $\pi_1$ invariant; the absence of monopoles follows
-      from $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical model.
+      the topological layer: charge is a $\pi_1$ invariant; the absence of monopoles is open, and
+      does not follow from $\pi_2 = 0$ on the chosen domain of the base.
 
     \subsection{The withdrawn \texorpdfstring{$\SU(3)$}{SU(3)} route}
       \label{sec:su3}
@@ -491,7 +492,7 @@ open here is not one of their inputs.
           Sector & Papers & Central output & Status \\
           \midrule
           $\UU(1)$ fibre & TopInv & Charge $= w \cdot e$, on imported inputs & S \\
-          Monopole exclusion & TopInv & $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model & P \\
+          Monopoles & TopInv & $\pi_2 = 0$ on a chosen domain; no exclusion derived & O \\
           $\UU(1)$ phase & Q6a & Global phase rotations, unresolved by span-based observables & S \\
           $\SU(2)$ sector & O23, O27, Q6a, Q7 & Quotient factorisation; $\su(2)$ supplied & C \\
           Charges & Q6a, TopInv & Fibre-invariant charges & S \\
@@ -551,7 +552,7 @@ open here is not one of their inputs.
         Charge/mass/inertia as saturated responses & SMchargemass~\cite{Beau2026e} & S \\
         Admissible principal bundle $P_{\Gpi}(M, \Gpi)$ & Q13, Q14 & S, for a supplied compact $\Gpi$ \\
         Charge quantisation $q_{\mathrm{eff}} = w \cdot e$ & --- & S (imported inputs) \\
-        Absence of magnetic monopoles & --- & P (canonical) \\
+        Absence of magnetic monopoles & --- & O (open) \\
         $\su(2)$ sector under a supplied carrier & --- & C \\
         $\SU(3)$ colour sector & --- & W (withdrawn, O31) \\
         Projective chirality & --- & S \\
@@ -566,10 +567,10 @@ open here is not one of their inputs.
       \label{sec:proved}
 
       \begin{enumerate}
-        \item \textit{Absence of magnetic monopoles on the canonical model}
-        (TopologicalInvariants, Proposition~4.1 and Corollary~5.1):
-        $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$ on the canonical admissible model;
-        no isolated magnetic charge is topologically admissible.
+        \item \textit{Triviality of $\pi_2$ on a chosen domain of the Hopf base}
+        (TopologicalInvariants, Proposition~4.1):
+        the base with two disjoint discs removed has $\pi_2 = 0$; no exclusion of magnetic
+        monopoles is derived from it (TopologicalInvariants, Remark~5.1).
 
         \item \textit{Neutral-sector dimension under a supplied carrier}
         (O23~\cite{Beau2026a27}, Theorem~3.1):
@@ -616,7 +617,7 @@ open here is not one of their inputs.
         inputs that TopologicalInvariants carries rather than derives: the identification of the
         projection fibre with $S^3$, and the identification of the $S^1$ phase with electric charge.
         Proposition~3.1 does not invoke the canonical admissible model; that restriction belongs to
-        the monopole results below.
+        the $\pi_2$ computation.
 
         \item \textit{$\UU(1)$ as phase symmetry} (Foundation, Q6a):
         the $\UU(1)$ sector is the group of global phase rotations of the complex fibre, which
@@ -687,8 +688,9 @@ open here is not one of their inputs.
 
         \item \textit{$\pi_2(\Ceff) = 0$ on the full configuration space}
         (TopologicalInvariants, Remark~4.2):
-        the monopole exclusion is proved on the canonical model; extension to the full effective
-        configuration space $\Ceff$ is open.
+        $\pi_2 = 0$ is proved for the chosen domain only; deriving the admissible base from the
+        projection structure, and the extension to the full effective configuration space $\Ceff$,
+        are open, and so is the absence of magnetic monopoles.
 
         \item \textit{Maximal chirality ($V - A$)} (TopologicalInvariants, Remark~6.2):
         projective chirality is established as a structural mechanism; its identification with the
@@ -712,8 +714,10 @@ open here is not one of their inputs.
     O31 withdrew each of those three separately, and this note asserts none of them.
 
     \textbf{Open deliverable 3: $\pi_2(\Ceff) = 0$ in general.}
-    The topological exclusion of magnetic monopoles is proved on the canonical admissible model.
-    Extension to the full $\Ceff$ is a well-posed open problem in homotopy theory.
+    The triviality of $\pi_2$ is proved for a chosen domain of the Hopf base, and no topological
+    exclusion of magnetic monopoles is derived.
+    Deriving the admissible base from the projection structure, and determining whether $\pi_2$ of
+    the Hopf base bears on magnetic defects at all, are open problems.
 
     \textbf{Open deliverable 4: $V - A$ maximality from admissibility.}
     The structural mechanism for projective chirality is identified.
@@ -728,7 +732,7 @@ open here is not one of their inputs.
     Of its three sectors, one is structural, one is conditional and one is withdrawn.
     $\UU(1)$ arises from the Hopf phase fibre of $\Pi \simeq S^3$, with charge quantisation
     following from $\pi_1(S^1) \cong \mathbb{Z}$ on two premises carried as structural input; the
-    monopole exclusion is the result that holds on the canonical admissible model.
+    absence of magnetic monopoles is open.
     $\SU(2)$ arises from the spinor carrier supplied by O23, whose neutral sector is
     $\su(2) \cong \ImH$; O27 supplies factorisation through the admissibility quotient and a
     one-dimensional \emph{complex} intertwiner space, while the identification of that quotient with
