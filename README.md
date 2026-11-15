@@ -100,7 +100,7 @@ Model group.
 | Sector | Papers | Central output | Status |
 |---|---|---|---|
 | $\mathrm{U}(1)$ fibre | TopInv | Charge $= w \cdot e$, on imported inputs | S |
-| Monopole exclusion | TopInv | $\pi_2(\mathcal{C}_{\mathrm{adm}}) = 0$, canonical model | P |
+| Monopoles | TopInv | $\pi_2 = 0$ on a chosen domain; no exclusion derived | O |
 | $\mathrm{U}(1)$ phase | Q6a | Global phase rotations, unresolved by span-based observables | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
 | Charges | Q6a, TopInv | Fibre-invariant charges | S |
@@ -119,9 +119,10 @@ Status codes: **P** = proved, **S** = structural, **N** = numerical, **C** = con
    excludes its subgroups, which irreducibility and determinant one demonstrably do not.
 2. **A route to a composite gauge group.** Granting $\mathrm{U}(1)$ and a conditional
    $\mathrm{SU}(2)$, nothing establishes a single group, commuting factors, or a direct product.
-3. **$\pi_2(\mathcal{C}_{\mathrm{eff}}) = 0$ in general.** The topological exclusion of
-   magnetic monopoles is proved on the canonical admissible model; extension to the full
-   effective configuration space is a well-posed open problem in homotopy theory.
+3. **$\pi_2(\mathcal{C}_{\mathrm{eff}}) = 0$ in general.** The triviality of $\pi_2$ is proved
+   for a chosen domain of the Hopf base, and no topological exclusion of magnetic monopoles is
+   derived. Deriving the admissible base from the projection structure, and determining whether
+   $\pi_2$ of the Hopf base bears on magnetic defects at all, are open problems.
 4. **$V - A$ maximality from admissibility.** The structural mechanism for projective
    chirality is identified; its derivation of the specific $V - A$ form of the weak
    interaction current from admissibility data is an open analytical problem.
