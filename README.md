@@ -106,7 +106,7 @@ Model group.
 | Monopoles | TopInv | $\pi_2 = 0$ on a chosen domain; no exclusion derived | O |
 | $\mathrm{U}(1)$ phase | Q6a | Global phase rotations, unresolved by span-based observables | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
-| Charges | Q6a, TopInv | Fibre-invariant charges | S |
+| Charges | Q6a | Fibre-invariant charges | S |
 | Bundle | Q12, Q6a | Supplied compact $G_\Pi$ and connection | S, C |
 | $\mathrm{SU}(3)$, either graph | O31 | Triplet co-admissibility route | W |
 | Triplet variance ratios | O32 | $R_{\mathrm{var}}$ at the noise floor | N |
