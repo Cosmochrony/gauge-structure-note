@@ -52,11 +52,13 @@ S^1 \hookrightarrow S^3 \to S^2
 
 1. **$\mathrm{U}(1)$ from the Hopf phase fibre** — the projection fibre $\Pi \simeq S^3$
    carries a canonical Hopf fibration $S^1 \hookrightarrow S^3 \to S^2$; the circle fibre
-   supports a $\mathrm{U}(1)$ phase symmetry whose winding number $w \in \pi_1(S^1) \cong \mathbb{Z}$
-   is the topological origin of electric charge (TopInv, Proposition 3.1, which does not invoke the
-   canonical admissible model). Two premises there are structural inputs rather than results: the
-   identification of the fibre with $S^3$, imported from the white paper, and the identification of
-   the $S^1$ phase with electric charge. The sector is
+   supports a $\mathrm{U}(1)$ phase symmetry with an integer winding number
+   $w \in \pi_1(S^1) \cong \mathbb{Z}$ (TopInv, Proposition 3.1). The winding is invariant for
+   configurations in a fixed fibre or over a trivialising domain of the base, not in the whole fibre
+   $S^3$, so a chosen domain and its trivialisation enter this result too. The identification of the
+   fibre with $S^3$, imported from the white paper, is a structural input; the identification of the
+   winding with electric charge is not derived, since no relation between the internal fibre and an
+   emergent electromagnetic potential is supplied, and charge quantisation is open. The sector is
    argued in the topological layer rather than in O31, so the O31 withdrawal notice does not reach it —
    which is a statement about independence from O31, not about its premises being derived.
 2. **$\mathrm{SU}(2)$, conditional on a supplied carrier** — the admissible sector is
@@ -99,7 +101,8 @@ Model group.
 
 | Sector | Papers | Central output | Status |
 |---|---|---|---|
-| $\mathrm{U}(1)$ fibre | TopInv | Charge $= w \cdot e$, on imported inputs | S |
+| $\mathrm{U}(1)$ fibre | TopInv | Integer fibre winding, on imported inputs | S |
+| Charge from winding | TopInv | $q_{\mathrm{eff}} = w \cdot e$ not derived | O |
 | Monopoles | TopInv | $\pi_2 = 0$ on a chosen domain; no exclusion derived | O |
 | $\mathrm{U}(1)$ phase | Q6a | Global phase rotations, unresolved by span-based observables | S |
 | $\mathrm{SU}(2)$ sector | O23, O27, Q6a, Q7 | Quotient factorisation; $\mathfrak{su}(2)$ supplied | C |
@@ -119,11 +122,14 @@ Status codes: **P** = proved, **S** = structural, **N** = numerical, **C** = con
    excludes its subgroups, which irreducibility and determinant one demonstrably do not.
 2. **A route to a composite gauge group.** Granting $\mathrm{U}(1)$ and a conditional
    $\mathrm{SU}(2)$, nothing establishes a single group, commuting factors, or a direct product.
-3. **$\pi_2(\mathcal{C}_{\mathrm{eff}}) = 0$ in general.** The triviality of $\pi_2$ is proved
+3. **The winding as electric charge.** A specified relation between the internal fibre and an
+   electromagnetic potential of the emergent description, which $q_{\mathrm{eff}} = w \cdot e$
+   requires, is not supplied; charge quantisation in the emergent description is open.
+4. **$\pi_2(\mathcal{C}_{\mathrm{eff}}) = 0$ in general.** The triviality of $\pi_2$ is proved
    for a chosen domain of the Hopf base, and no topological exclusion of magnetic monopoles is
    derived. Deriving the admissible base from the projection structure, and determining whether
    $\pi_2$ of the Hopf base bears on magnetic defects at all, are open problems.
-4. **$V - A$ maximality from admissibility.** The structural mechanism for projective
+5. **$V - A$ maximality from admissibility.** The structural mechanism for projective
    chirality is identified; its derivation of the specific $V - A$ form of the weak
    interaction current from admissibility data is an open analytical problem.
 

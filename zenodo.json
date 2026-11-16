@@ -5,5 +5,5 @@
   "main_tex": "tex/GaugeStructureNote.tex",
   "zenodo_id": 20435029,
   "doi": "10.5281/zenodo.20435029",
-  "notes": "Version 2.4 aligns the note with TopologicalInvariants 1.1. The monopole exclusion is no longer listed as proved: pi_2 = 0 holds on a chosen domain of the Hopf base, the domain is not derived from the capacity axiom, and the absence of magnetic monopoles is open. No other statement of the note is changed."
+  "notes": "Version 2.5 aligns the note with TopologicalInvariants 1.2. The winding of the Hopf phase fibre is invariant for configurations in a fixed fibre or over a trivialising domain of the base, not in the whole fibre S^3, so the former statement that the winding result does not use the chosen domain is withdrawn. The identification of the winding with electric charge is not derived and charge quantisation is listed as open. The bibliography carries the new TopologicalInvariants title. No other statement of the note is changed."
 }
