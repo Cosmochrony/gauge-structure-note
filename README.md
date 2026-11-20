@@ -109,7 +109,7 @@ Model group.
 | Charges | Q6a | Fibre-invariant charges | S |
 | Bundle | Q12, Q6a | Supplied compact $G_\Pi$ and connection | S, C |
 | $\mathrm{SU}(3)$, either graph | O31 | Triplet co-admissibility route | W |
-| Triplet variance ratios | O32 | $R_{\mathrm{var}}$ at the noise floor | N |
+| Triplet variance ratios | O32 | diagnostic proved colour-blind (unit-scaling invariance) | P |
 | $G_\Pi$ as a composite | O31 | Direct-product structure | W |
 
 Status codes: **P** = proved, **S** = structural, **N** = numerical, **C** = conditional,
