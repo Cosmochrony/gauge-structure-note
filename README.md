@@ -14,8 +14,8 @@ relational substrate; its fibre $\Pi^{-1}(O_n)$ carries internal structure.
 > Which internal symmetry groups are preserved as invariants of admissible projection?
 
 Let $\mathcal{G}_\Pi$ be the group of automorphisms that preserve $\Pi$, each mapping every fibre to
-itself (ENI, Definition 3; the group $\mathcal{G}$ of Q6a), restricted to those that preserve the
-admissibility constraints. Whether the admissibility structure identifies a structure group
+itself (ENI, Definition 3; the group $\mathcal{G}$ of Q6a), the automorphisms being taken
+in the category whose morphisms also preserve the admissibility constraints. Whether the admissibility structure identifies a structure group
 $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$ is open: **the sub-programme does not
 establish it.** The derivation of that identification is withdrawn at its source, and no
 replacement is available. Throughout, $G_\Pi$ follows the convention of Q12: it denotes the
@@ -23,8 +23,9 @@ supplied structure group of a gauge structure in the physical sense. It is not $
 and it does not denote the group $G_\Pi$ acting effectively within $\mathcal{G}_\Pi$ of ENI's
 Definition 3 (ENI, Remark 4).
 
-Minimal gauge freedom in ENI's sense (Definition 3) requires the non-injectivity of $\Pi$ (ENI,
-Proposition 4); the converse holds exactly when $\mathcal{G}_\Pi \neq \{e\}$ (ENI, Remark 4). On the
+Non-trivial minimal gauge freedom in ENI's sense (Definition 3) requires the non-injectivity of $\Pi$ (ENI,
+Proposition 4); conversely, for a non-injective $\Pi$, a non-trivial minimal gauge structure exists exactly when
+$\mathcal{G}_\Pi \neq \{e\}$ (ENI, Remark 4). On the
 supplied complex carrier, the global phase rotations belong to $\mathcal{G}_\Pi$ to the extent that
 $\Pi_n$ is defined through span-based observables (Q6a). Gauge structure in the physical sense
 (structure group, principal bundle, connection and its dynamics) remains supplied. This note records what the question has and has not established.
